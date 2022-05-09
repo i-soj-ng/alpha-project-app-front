@@ -14,6 +14,9 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-alphaProject-alphaProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-alphaProject-alphaProjectTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8869B438C7C145D898F10DC3 /* NanumSquareRoundEB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAE2ADAACA6B42E6AF9F6C48 /* NanumSquareRoundEB.ttf */; };
+		A32813DA0002473E89FB1CD4 /* NanumSquareRoundR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F0A6F24EB384DFCA2873233 /* NanumSquareRoundR.ttf */; };
+		FA82CF21AED44BACA94FB718 /* NanumSquareRoundB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B19829A4DA8D4F688C0E74B0 /* NanumSquareRoundB.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,12 +40,15 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = alphaProject/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = alphaProject/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-alphaProject-alphaProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-alphaProject-alphaProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F0A6F24EB384DFCA2873233 /* NanumSquareRoundR.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = NanumSquareRoundR.ttf; path = ../src/assets/fonts/NanumSquareRoundR.ttf; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-alphaProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alphaProject.debug.xcconfig"; path = "Target Support Files/Pods-alphaProject/Pods-alphaProject.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-alphaProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alphaProject.release.xcconfig"; path = "Target Support Files/Pods-alphaProject/Pods-alphaProject.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-alphaProject-alphaProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alphaProject-alphaProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-alphaProject-alphaProjectTests/Pods-alphaProject-alphaProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-alphaProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-alphaProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = alphaProject/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-alphaProject-alphaProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alphaProject-alphaProjectTests.release.xcconfig"; path = "Target Support Files/Pods-alphaProject-alphaProjectTests/Pods-alphaProject-alphaProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		B19829A4DA8D4F688C0E74B0 /* NanumSquareRoundB.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = NanumSquareRoundB.ttf; path = ../src/assets/fonts/NanumSquareRoundB.ttf; sourceTree = "<group>"; };
+		DAE2ADAACA6B42E6AF9F6C48 /* NanumSquareRoundEB.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = NanumSquareRoundEB.ttf; path = ../src/assets/fonts/NanumSquareRoundEB.ttf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -106,6 +112,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2ECB917990B84D0AB6D52DFB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1F0A6F24EB384DFCA2873233 /* NanumSquareRoundR.ttf */,
+				DAE2ADAACA6B42E6AF9F6C48 /* NanumSquareRoundEB.ttf */,
+				B19829A4DA8D4F688C0E74B0 /* NanumSquareRoundB.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +139,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				2ECB917990B84D0AB6D52DFB /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -244,6 +262,9 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				A32813DA0002473E89FB1CD4 /* NanumSquareRoundR.ttf in Resources */,
+				8869B438C7C145D898F10DC3 /* NanumSquareRoundEB.ttf in Resources */,
+				FA82CF21AED44BACA94FB718 /* NanumSquareRoundB.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
