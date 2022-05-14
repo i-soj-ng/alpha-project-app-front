@@ -6,4 +6,4 @@
 
 ### 제작 완료 화면
 1. 로그인 화면
-![Simulator Screen Shot - iPhone 13 - 2022-05-15 at 00 57 22](https://user-images.githubusercontent.com/66251759/168439490-ba11eb76-6a17-450b-8349-6a7b115aa3bf.png)
+<img src="https://user-images.githubusercontent.com/66251759/168439490-ba11eb76-6a17-450b-8349-6a7b115aa3bf.png" width="280"/>
