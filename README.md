@@ -1,5 +1,5 @@
 # Photo Bubble
-알파프로젝트: AR 네컷사진 'Photo Bubble' 앱 프론트엔드
+알파프로젝트: AR 네컷사진 'Photo Bubble' 앱 프론트엔드 (개발 진행 중)
 
 ## 사용 스택
 리액트 네이티브, Node.js
