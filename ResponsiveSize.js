@@ -18,6 +18,6 @@ export function heightPercentage(height) {
 }
 
 export function fontPercentage(size) {
-  const percentage = size * 0.135;
+  const percentage = size * 0.125;
   return responsiveScreenFontSize(percentage);
 }
