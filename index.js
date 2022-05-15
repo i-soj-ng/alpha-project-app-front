@@ -5,6 +5,7 @@
 import {AppRegistry} from 'react-native';
 import App from './App';
 import {name as appName} from './app.json';
-import {HelloWorldApp} from './src/components/login/login.js';
+import {Login} from './src/pages/Login';
+import {Signup} from "./src/pages/Signup";
 
-AppRegistry.registerComponent(appName, () => HelloWorldApp);
+AppRegistry.registerComponent(appName, () => Signup);
