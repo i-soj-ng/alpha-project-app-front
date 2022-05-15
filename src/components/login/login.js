@@ -4,6 +4,7 @@ import {
   View,
   TextInput,
   TouchableOpacity,
+  Image,
   StyleSheet,
 } from 'react-native';
 import {
@@ -14,6 +15,40 @@ import {
 import CheckBox from '@react-native-community/checkbox';
 
 export function HelloWorldApp() {
+  const [email, setEmail] = React.useState('');
+  const [password, setPassword] = React.useState('');
+  const [emailInputStyle, setEmailInputStyle] = React.useState(styles.input);
+  const [pwInputStyle, setPwInputStyle] = React.useState(styles.input);
+  const [showPw, setShowPw] = React.useState(true);
+  const [pwIcon, setPwIcon] = React.useState(require('../../assets/images/eye.png'));
+  const [isRevealIcon, setIsRevealIcon] = React.useState(false);
+  const [isDisableButton, setIsDisableButton] = React.useState(true);
+
+  const CompleteEmailInput = () => {
+    if (email.length > 0) {
+      setEmailInputStyle(styles.completeInput);
+    } else {
+      setEmailInputStyle(styles.input);
+    }
+  };
+
+  const CompletePwInput = () => {
+    if (password.length > 0) {
+      setPwInputStyle(styles.completeInput);
+    } else {
+      setPwInputStyle(styles.input);
+    }
+  };
+
+  const OnEyePress = () => {
+    setShowPw(!showPw);
+    if (showPw == true) {
+      setPwIcon(require('../../assets/images/eye-hide.png'));
+    } else {
+      setPwIcon(require('../../assets/images/eye.png'));
+    }
+  };
+
   return (
     <View>
       <View style={{alignItems: 'center'}}>
@@ -22,15 +57,68 @@ export function HelloWorldApp() {
       <View>
         <Text style={styles.loginText}>포토버블에 로그인하세요</Text>
         <View style={{alignItems: 'center'}}>
-          <TextInput style={styles.emailInput} placeholder="이메일 주소" />
-          <TextInput style={styles.pwInput} placeholder="비밀번호" />
+          <TextInput
+            style={emailInputStyle}
+            placeholder="이메일 주소"
+            onChangeText={email => {
+              setEmail(email);
+              if (email.length > 0 && password.length > 2) {
+                setIsDisableButton(false);
+              } else {
+                setIsDisableButton(true);
+              }
+            }}
+            value={email}
+            onFocus={() => setEmailInputStyle(styles.focusInput)}
+            onBlur={CompleteEmailInput}
+          />
+          <View style={{position: 'relative'}}>
+            <TextInput
+              style={pwInputStyle}
+              placeholder="비밀번호"
+              secureTextEntry={showPw}
+              onChangeText={pw => {
+                setPassword(pw);
+                if (pw.length > 0) {
+                  setIsRevealIcon(true);
+                  if (email.length > 0 && pw.length > 2) {
+                    setIsDisableButton(false);
+                  } else {
+                    setIsDisableButton(true);
+                  }
+                } else {
+                  setIsRevealIcon(false);
+                }
+              }}
+              value={password}
+              onFocus={() => setPwInputStyle(styles.focusInput)}
+              onBlur={CompletePwInput}
+            />
+            {
+              isRevealIcon == true
+                ? <TouchableOpacity
+                  style={{
+                    position: 'absolute',
+                    left: widthPercentage(313),
+                    top: heightPercentage(12),
+                  }}
+                  onPress={OnEyePress}
+                  activeOpacity={0.9}>
+                  <Image source={pwIcon} />
+                </TouchableOpacity>
+                : null
+            }
+          </View>
         </View>
         <View style={{flexDirection: 'row'}}>
           <CheckBox boxType="square" lineWidth={1.0} style={styles.checkBox} />
           <Text style={styles.checkBoxText}>로그인 상태 유지</Text>
         </View>
         <View style={{alignItems: 'center'}}>
-          <TouchableOpacity style={styles.button} activeOpacity={0.8}>
+          <TouchableOpacity
+            disabled={isDisableButton}
+            style={isDisableButton ? styles.disabledButton : styles.abledButton}
+            activeOpacity={0.8}>
             <Text style={styles.buttonText}>로그인</Text>
           </TouchableOpacity>
         </View>
@@ -66,9 +154,6 @@ export function HelloWorldApp() {
 }
 
 const styles = StyleSheet.create({
-  parents: {
-    alignItems: 'center',
-  },
   header: {
     fontSize: fontPercentage(18),
     fontFamily: 'NanumSquareRoundB',
@@ -80,8 +165,9 @@ const styles = StyleSheet.create({
     color: '#1E3968DE',
     marginTop: heightPercentage(88),
     marginLeft: widthPercentage(21),
+    marginBottom: heightPercentage(40),
   },
-  emailInput: {
+  input: {
     justifyContent: 'center',
     height: heightPercentage(48),
     width: widthPercentage(350),
@@ -89,35 +175,57 @@ const styles = StyleSheet.create({
     borderRadius: 54,
     borderColor: '#9ABCED',
     fontFamily: 'NanumSquareRoundB',
-    marginTop: heightPercentage(40),
+    marginBottom: heightPercentage(12),
     paddingVertical: heightPercentage(16),
     paddingHorizontal: widthPercentage(20),
   },
-  pwInput: {
+  focusInput: {
     justifyContent: 'center',
     height: heightPercentage(48),
     width: widthPercentage(350),
-    borderWidth: 1,
+    borderWidth: 1.5,
     borderRadius: 54,
-    borderColor: '#9ABCED',
+    borderColor: '#5B8CD1DE',
     fontFamily: 'NanumSquareRoundB',
-    marginTop: heightPercentage(12),
+    marginBottom: heightPercentage(12),
+    paddingVertical: heightPercentage(16),
+    paddingHorizontal: widthPercentage(20),
+  },
+  completeInput: {
+    justifyContent: 'center',
+    height: heightPercentage(48),
+    width: widthPercentage(350),
+    borderRadius: 54,
+    backgroundColor: '#ECF2FF',
+    fontFamily: 'NanumSquareRoundB',
+    marginBottom: heightPercentage(12),
     paddingVertical: heightPercentage(16),
     paddingHorizontal: widthPercentage(20),
   },
   checkBox: {
-    marginTop: widthPercentage(10),
-    marginLeft: widthPercentage(16),
-    transform: [{scaleX: 0.6}, {scaleY: 0.6}],
+    marginTop: heightPercentage(3),
+    marginLeft: widthPercentage(24),
+    transform: [{scaleX: 0.8}, {scaleY: 0.8}],
   },
   checkBoxText: {
-    marginTop: widthPercentage(17),
-    marginLeft: widthPercentage(5),
+    marginTop: widthPercentage(10),
+    fontSize: fontPercentage(12),
+    color: '#505050',
+    fontFamily: 'NanumSquareRoundB',
   },
-  button: {
+  disabledButton: {
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#D2D2D2',
+    width: widthPercentage(350),
+    height: heightPercentage(48),
+    marginTop: widthPercentage(43),
+    borderRadius: 54,
+  },
+  abledButton: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#9ABCED',
     width: widthPercentage(350),
     height: heightPercentage(48),
     marginTop: widthPercentage(43),
