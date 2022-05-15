@@ -4,8 +4,9 @@
 ## 사용 스택
 React Native, Node.js
 
-## 개발 완료된 화면
+## 개발 완료 화면
 1. 로그인 화면
 <img src="https://user-images.githubusercontent.com/66251759/168466438-952dcb92-4850-4625-8853-1bd11ba250af.png" width="250" align="left">
 <img src="https://user-images.githubusercontent.com/66251759/168466469-8ad98e65-8626-42cb-924f-77e14e8b3a0f.png" width="250" align="left">
-  
+2. 회원가입 화면
+<img src="https://user-images.githubusercontent.com/66251759/168478843-6da76f51-acff-4b8d-931a-b9ece2adf515.png" width="250" align="left">
