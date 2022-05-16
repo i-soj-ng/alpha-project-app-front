@@ -46,8 +46,8 @@ export function Login() {
         <TextBelow text="아직 회원이 아니신가요?" name="회원가입"/>
       </View>
     </View>
-  )
-};
+  );
+}
 
 const styles = StyleSheet.create({
   header: {

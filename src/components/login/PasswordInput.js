@@ -2,12 +2,15 @@ import React, { useEffect } from 'react';
 import { Image, StyleSheet, TextInput, TouchableOpacity, View } from "react-native";
 import { heightPercentage, widthPercentage } from "../../../ResponsiveSize";
 
+
+
 export function PasswordInput(props) {
   const [password, setPassword] = React.useState('');
   const [pwInputStyle, setPwInputStyle] = React.useState(styles.input);
   const [showPw, setShowPw] = React.useState(true);
   const [pwIcon, setPwIcon] = React.useState(require('../../assets/images/eye.png'));
   const [isRevealIcon, setIsRevealIcon] = React.useState(false);
+  const [isPwChecked, setIsPwChecked] = React.useState(false);
 
   const CompletePwInput = () => {
     if (password.length > 0) {
@@ -19,7 +22,7 @@ export function PasswordInput(props) {
 
   const OnEyePress = () => {
     setShowPw(!showPw);
-    if (showPw == true) {
+    if (showPw === true) {
       setPwIcon(require('../../assets/images/eye-hide.png'));
     } else {
       setPwIcon(require('../../assets/images/eye.png'));
@@ -40,10 +43,11 @@ export function PasswordInput(props) {
           setPassword(pw);
           if (pw.length > 0) {
             setIsRevealIcon(true);
-            if (props.email.length > 0 && password.length > 2) {
-              props.setIsDisabledButton(false);
+            if (props.email && password.length > 3) {
+              setIsPwChecked(true);
+              console.log("password= ", password)
             } else {
-              props.setIsDisabledButton(true);
+              setIsPwChecked(false);
             }
           } else {
             setIsRevealIcon(false);
@@ -54,17 +58,134 @@ export function PasswordInput(props) {
         onBlur={CompletePwInput}
       />
       {
-        isRevealIcon == true
-          ? <TouchableOpacity
-            style={{
-              position: 'absolute',
-              left: widthPercentage(313),
-              top: heightPercentage(12),
-            }}
-            onPress={OnEyePress}
-            activeOpacity={0.9}>
-            <Image source={pwIcon} />
-          </TouchableOpacity>
+        isRevealIcon === true
+          ? (isPwChecked === true
+              ? <View style={{position: 'absolute'}}>
+                <TouchableOpacity
+                  style={{
+                    position: 'absolute',
+                    left: widthPercentage(284),
+                    top: heightPercentage(12),
+                  }}
+                  onPress={OnEyePress}
+                  activeOpacity={0.9}>
+                  <Image source={pwIcon} />
+                </TouchableOpacity>
+                <Image
+                  source={require('../../assets/images/check-mark.png')}
+                  style={{
+                    position: 'absolute',
+                    left: widthPercentage(319),
+                    top: heightPercentage(17),
+                  }}
+                />
+              </View>
+              : <TouchableOpacity
+                style={{
+                  position: 'absolute',
+                  left: widthPercentage(313),
+                  top: heightPercentage(12),
+                }}
+                onPress={OnEyePress}
+                activeOpacity={0.9}>
+                <Image source={pwIcon} />
+              </TouchableOpacity>
+          )
+          : null
+      }
+    </View>
+  );
+}
+
+export function CheckPasswordInput(props) {
+  const [rePassword, setRePassword] = React.useState('');
+  const [pwInputStyle, setPwInputStyle] = React.useState(styles.input);
+  const [showPw, setShowPw] = React.useState(true);
+  const [pwIcon, setPwIcon] = React.useState(require('../../assets/images/eye.png'));
+  const [isRevealIcon, setIsRevealIcon] = React.useState(false);
+  const [isPwChecked, setIsPwChecked] = React.useState(false);
+
+  const CompletePwInput = () => {
+    if (rePassword.length > 0) {
+      setPwInputStyle(styles.completeInput);
+    } else {
+      setPwInputStyle(styles.input);
+    }
+  };
+
+  const OnEyePress = () => {
+    setShowPw(!showPw);
+    if (showPw === true) {
+      setPwIcon(require('../../assets/images/eye-hide.png'));
+    } else {
+      setPwIcon(require('../../assets/images/eye.png'));
+    }
+  };
+
+  useEffect(() => {
+    props.setRePassword(rePassword)
+    if (props.email && (rePassword === props.password)) {
+      setIsPwChecked(true);
+      props.setIsDisabledButton(false);
+    } else {
+      setIsPwChecked(false);
+      props.setIsDisabledButton(true);
+    }
+  },[rePassword])
+
+  return (
+    <View style={{position: "relative"}}>
+      <TextInput
+        style={pwInputStyle}
+        placeholder={props.placeholder}
+        secureTextEntry={showPw}
+        onChangeText={pw => {
+          setRePassword(pw);
+          if (pw.length > 0) {
+            setIsRevealIcon(true);
+            console.log("!!!password= ", props.password);
+          } else {
+            setIsRevealIcon(false);
+          }
+        }}
+        value={rePassword}
+        onFocus={() => setPwInputStyle(styles.focusInput)}
+        onBlur={CompletePwInput}
+      />
+      {
+        isRevealIcon === true
+          ? (isPwChecked === true
+              ? <View style={{position: 'absolute'}}>
+                <TouchableOpacity
+                  style={{
+                    position: 'absolute',
+                    left: widthPercentage(284),
+                    top: heightPercentage(12),
+                  }}
+                  onPress={OnEyePress}
+                  activeOpacity={0.9}>
+                  <Image source={pwIcon} />
+                </TouchableOpacity>
+                <Image
+                  source={require('../../assets/images/check-mark.png')}
+                  style={{
+                    position: 'absolute',
+                    left: widthPercentage(319),
+                    top: heightPercentage(17),
+                  }}
+                />
+              </View>
+              : <TouchableOpacity
+                style={{
+                  position: 'absolute',
+                  left: widthPercentage(313),
+                  top: heightPercentage(12),
+                }}
+                onPress={OnEyePress}
+                activeOpacity={0.9}>
+                <Image source={pwIcon} />
+              </TouchableOpacity>
+          )
           : null
       }
     </View>

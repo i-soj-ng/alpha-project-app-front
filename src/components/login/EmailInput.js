@@ -22,6 +22,13 @@ export function EmailInput(props) {
   useEffect(() => {
     if (CheckEmail() === true) {
       props.setEmail(email);
+      if (props.setIsEmailChecked) {
+        props.setIsEmailChecked(true);
+      }
+    } else {
+      if (props.setIsEmailChecked) {
+        props.setIsEmailChecked(false);
+      }
     }
   },[email]);
 

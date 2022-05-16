@@ -29,7 +29,6 @@ export function Signup() {
 
   const [pwIcon, setPwIcon] = React.useState(require('../../assets/images/eye.png'));
   const [rePwIcon, setRePwIcon] = React.useState(require('../../assets/images/eye.png'));
-
   const [isRevealIcon, setIsRevealIcon] = React.useState(false);
   const [isRevealReIcon, setIsRevealReIcon] = React.useState(false);
   const [isDisableButton, setIsDisableButton] = React.useState(true);
