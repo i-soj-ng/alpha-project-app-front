@@ -30,7 +30,7 @@ export function PasswordInput(props) {
   useEffect(() => {
     props.setPassword(password)
 
-    if (props.title === "login") {
+    if (props.title === "user_service") {
       if (props.email.length > 0 && password.length > 2) {
         props.setIsDisabledButton(false);
       } else {
@@ -80,7 +80,7 @@ export function PasswordInput(props) {
                   <Image source={pwIcon} />
                 </TouchableOpacity>
                 <Image
-                  source={require('../../assets/images/check-mark.png')}
+                  source={require('../../assets/images/blue-check-mark.png')}
                   style={{
                     position: 'absolute',
                     left: widthPercentage(319),
@@ -175,7 +175,7 @@ export function CheckPasswordInput(props) {
                   <Image source={pwIcon} />
                 </TouchableOpacity>
                 <Image
-                  source={require('../../assets/images/check-mark.png')}
+                  source={require('../../assets/images/blue-check-mark.png')}
                   style={{
                     position: 'absolute',
                     left: widthPercentage(319),

@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { EmailInput } from "../components/login/EmailInput";
+import { EmailInput } from "../components/user_service/EmailInput";
 import { StyleSheet, Text, View } from "react-native";
 import { fontPercentage, heightPercentage, widthPercentage } from "../../ResponsiveSize";
-import { PasswordInput } from "../components/login/PasswordInput";
-import { SubmitButton } from "../components/login/SubmitButton";
+import { PasswordInput } from "../components/user_service/PasswordInput";
+import { SubmitButton } from "../components/user_service/SubmitButton";
 import CheckBox from "@react-native-community/checkbox";
-import { TextBelow } from "../components/login/TextBelow";
+import { TextBelow } from "../components/user_service/TextBelow";
 
 export function Login({ navigation }) {
   const [email, setEmail] = React.useState('');
@@ -54,14 +54,14 @@ const styles = StyleSheet.create({
   header: {
     fontSize: fontPercentage(18),
     fontFamily: 'NanumSquareRoundB',
-    marginTop: heightPercentage(64),
+    marginTop: heightPercentage(66),
   },
   titleText: {
     fontSize: fontPercentage(20),
     fontFamily: 'NanumSquareRoundEB',
     color: '#1E3968DE',
     marginTop: heightPercentage(88),
-    marginLeft: widthPercentage(21),
+    marginLeft: widthPercentage(22),
     marginBottom: heightPercentage(40),
   },
   checkBox: {

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { EmailInput } from "../components/login/EmailInput";
+import { EmailInput } from "../components/user_service/EmailInput";
 import { StyleSheet, Text, View, Image } from "react-native";
 import { fontPercentage, heightPercentage, widthPercentage } from "../../ResponsiveSize";
-import { PasswordInput, CheckPasswordInput } from "../components/login/PasswordInput";
-import { SubmitButton } from "../components/login/SubmitButton";
-import { TextBelow } from "../components/login/TextBelow";
+import { PasswordInput, CheckPasswordInput } from "../components/user_service/PasswordInput";
+import { SubmitButton } from "../components/user_service/SubmitButton";
+import { TextBelow } from "../components/user_service/TextBelow";
 
 export function Signup({ navigation }) {
   const [email, setEmail] = React.useState('');
@@ -32,7 +32,7 @@ export function Signup({ navigation }) {
             {
               isEmailChecked === true
               ?<Image
-                  source={require('../assets/images/check-mark.png')}
+                  source={require('../assets/images/blue-check-mark.png')}
                   style={{
                     position: 'absolute',
                     left: widthPercentage(319),
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
   header: {
     fontSize: fontPercentage(18),
     fontFamily: 'NanumSquareRoundB',
-    marginTop: heightPercentage(64),
+    marginTop: heightPercentage(66),
   },
   titleText: {
     fontSize: fontPercentage(20),
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     color: '#1E3968DE',
     marginTop: heightPercentage(73),
-    marginLeft: widthPercentage(21),
+    marginLeft: widthPercentage(22),
     marginBottom: heightPercentage(29),
   },
   checkBox: {
