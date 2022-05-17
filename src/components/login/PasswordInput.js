@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import { Image, StyleSheet, TextInput, TouchableOpacity, View } from "react-native";
 import { heightPercentage, widthPercentage } from "../../../ResponsiveSize";
 
-
-
 export function PasswordInput(props) {
   const [password, setPassword] = React.useState('');
   const [pwInputStyle, setPwInputStyle] = React.useState(styles.input);
@@ -31,6 +29,14 @@ export function PasswordInput(props) {
 
   useEffect(() => {
     props.setPassword(password)
+
+    if (props.title === "login") {
+      if (props.email.length > 0 && password.length > 2) {
+        props.setIsDisabledButton(false);
+      } else {
+        props.setIsDisabledButton(true);
+      }
+    }
   },[password])
 
   return (
@@ -43,11 +49,13 @@ export function PasswordInput(props) {
           setPassword(pw);
           if (pw.length > 0) {
             setIsRevealIcon(true);
-            if (props.email && password.length > 3) {
-              setIsPwChecked(true);
-              console.log("password= ", password)
-            } else {
-              setIsPwChecked(false);
+            if (props.title === "signup") {
+              if (props.email && password.length > 3) {
+                setIsPwChecked(true);
+                console.log("password= ", password)
+              } else {
+                setIsPwChecked(false);
+              }
             }
           } else {
             setIsRevealIcon(false);

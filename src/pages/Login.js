@@ -8,7 +8,7 @@ import { SubmitButton } from "../components/login/SubmitButton";
 import CheckBox from "@react-native-community/checkbox";
 import { TextBelow } from "../components/login/TextBelow";
 
-export function Login() {
+export function Login({ navigation }) {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [isDisabledButton, setIsDisabledButton] = React.useState(true);
@@ -27,6 +27,7 @@ export function Login() {
             setIsDisabledButton={setIsDisabledButton}
           />
           <PasswordInput
+            title="login"
             setPassword={setPassword}
             placeholder="비밀번호"
             email={email}
@@ -43,7 +44,7 @@ export function Login() {
             isDisabledButton={isDisabledButton}
           />
         </View>
-        <TextBelow text="아직 회원이 아니신가요?" name="회원가입"/>
+        <TextBelow text="아직 회원이 아니신가요?" name="회원가입" onPress={() => navigation.navigate('Signup')}/>
       </View>
     </View>
   );

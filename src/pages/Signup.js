@@ -7,7 +7,7 @@ import { PasswordInput, CheckPasswordInput } from "../components/login/PasswordI
 import { SubmitButton } from "../components/login/SubmitButton";
 import { TextBelow } from "../components/login/TextBelow";
 
-export function Signup() {
+export function Signup({ navigation }) {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [rePassword, setRePassword] = React.useState('');
@@ -44,6 +44,7 @@ export function Signup() {
           </View>
           <View style={{position: 'relative'}}>
             <PasswordInput
+              title="signup"
               setPassword={setPassword}
               placeholder="비밀번호"
               email={email}
@@ -66,7 +67,7 @@ export function Signup() {
             isDisabledButton={isDisabledButton}
           />
         </View>
-        <TextBelow text="이미 회원이신가요?" name="로그인"/>
+        <TextBelow text="이미 회원이신가요?" name="로그인" onPress={() => navigation.navigate('Login')}/>
       </View>
     </View>
   )

@@ -25,14 +25,14 @@ const styles = StyleSheet.create({
   abledButton: {
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#9ABCED',
+    backgroundColor: '#A6C9FF',
     width: widthPercentage(350),
     height: heightPercentage(48),
     borderRadius: 54,
   },
   buttonText: {
     color: '#FFFFFF',
-    fontFamily: 'NanumSquareRoundB',
+    fontFamily: 'NanumSquareRoundEB',
     fontSize: fontPercentage(16),
   },
 });

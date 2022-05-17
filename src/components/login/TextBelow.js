@@ -18,7 +18,7 @@ export function TextBelow(props) {
         }}>
         {props.text}
       </Text>
-      <TouchableOpacity activeOpacity={0.8}>
+      <TouchableOpacity onPress={props.onPress} activeOpacity={0.8}>
         <Text
           style={{
             fontFamily: 'NanumSquareRoundB',
