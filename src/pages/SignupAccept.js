@@ -4,7 +4,7 @@ import { SubmitButton } from "../components/user_service/SubmitButton";
 import { CheckMark } from "../components/user_service/CheckMark";
 import { fontPercentage, heightPercentage, widthPercentage } from "../../ResponsiveSize";
 
-export function SignupAccept() {
+export function SignupAccept({ navigation }) {
   const [isDisabledButton, setIsDisabledButton] = React.useState(true);
   const [allCheck, setAllCheck] = React.useState(false);
   const [firstCheck, setFirstCheck] = React.useState(false);
@@ -35,7 +35,8 @@ export function SignupAccept() {
             position: 'absolute',
             left: widthPercentage(16),
             top: heightPercentage(64),
-          }}>
+          }}
+          onPress={() => navigation.pop()}>
           <Image source={require('../assets/images/right-arrow.png')} />
         </TouchableOpacity>
       </View>
@@ -76,6 +77,7 @@ export function SignupAccept() {
         <SubmitButton
           name="확인"
           isDisabledButton={isDisabledButton}
+          onPress={() => navigation.push('Nickname')}
         />
       </View>
     </View>

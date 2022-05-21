@@ -10,6 +10,7 @@ export function PasswordInput(props) {
   const [isRevealIcon, setIsRevealIcon] = React.useState(false);
   const [isPwChecked, setIsPwChecked] = React.useState(false);
 
+  // 비밀번호 입력 완료시, Input Style 변경
   const CompletePwInput = () => {
     if (password.length > 0) {
       setPwInputStyle(styles.completeInput);
@@ -18,6 +19,7 @@ export function PasswordInput(props) {
     }
   };
 
+  // 비밀번호 보이기
   const OnEyePress = () => {
     setShowPw(!showPw);
     if (showPw === true) {
@@ -30,12 +32,11 @@ export function PasswordInput(props) {
   useEffect(() => {
     props.setPassword(password)
 
-    if (props.title === "user_service") {
-      if (props.email.length > 0 && password.length > 2) {
-        props.setIsDisabledButton(false);
-      } else {
-        props.setIsDisabledButton(true);
-      }
+    // 버튼 활성화
+    if (props.email.length > 0 && password.length > 2) {
+      props.setIsDisabledButton(false);
+    } else {
+      props.setIsDisabledButton(true);
     }
   },[password])
 
@@ -105,6 +106,7 @@ export function PasswordInput(props) {
   );
 }
 
+// 비밀번호 재확인 컴포넌트
 export function CheckPasswordInput(props) {
   const [rePassword, setRePassword] = React.useState('');
   const [pwInputStyle, setPwInputStyle] = React.useState(styles.input);

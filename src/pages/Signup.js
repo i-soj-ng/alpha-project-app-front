@@ -65,6 +65,7 @@ export function Signup({ navigation }) {
           <SubmitButton
             name="다음"
             isDisabledButton={isDisabledButton}
+            onPress={() => navigation.push('SignupAccept')}
           />
         </View>
         <TextBelow text="이미 회원이신가요?" name="로그인" onPress={() => navigation.navigate('Login')}/>

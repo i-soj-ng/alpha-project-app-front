@@ -3,7 +3,7 @@ import { Image, StyleSheet, Text, TouchableOpacity, View, TextInput } from "reac
 import { SubmitButton } from "../components/user_service/SubmitButton";
 import { fontPercentage, heightPercentage, widthPercentage } from "../../ResponsiveSize";
 
-export function Nickname() {
+export function Nickname({ navigation }) {
   const [nickName, setNickName] = React.useState('');
   const [count, setCount] = React.useState(0);
   const [isDisabledButton, setIsDisabledButton] = React.useState(true);
@@ -26,7 +26,8 @@ export function Nickname() {
             position: 'absolute',
             left: widthPercentage(16),
             top: heightPercentage(64),
-          }}>
+          }}
+          onPress={() => navigation.pop()}>
           <Image source={require('../assets/images/right-arrow.png')} />
         </TouchableOpacity>
       </View>

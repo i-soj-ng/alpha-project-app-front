@@ -8,4 +8,4 @@ import { SignupAccept } from "./src/pages/SignupAccept";
 import { Nickname } from "./src/pages/Nickname";
 import App from "./App";
 
-AppRegistry.registerComponent(appName, () => Nickname);
+AppRegistry.registerComponent(appName, () => App);

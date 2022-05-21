@@ -7,6 +7,7 @@ export function SubmitButton(props) {
     <TouchableOpacity
       style={props.isDisabledButton ? styles.disabledButton : styles.abledButton}
       disabled={props.isDisabledButton}
+      onPress={props.onPress}
       activeOpacity={0.8}>
       <Text style={styles.buttonText}>{props.name}</Text>
     </TouchableOpacity>
