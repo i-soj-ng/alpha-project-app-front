@@ -12,4 +12,5 @@ React Native, Node.js
 2. 회원가입 화면
 <img src="https://user-images.githubusercontent.com/66251759/168478843-6da76f51-acff-4b8d-931a-b9ece2adf515.png" width="250" align="left">
 <img src="https://user-images.githubusercontent.com/66251759/168672413-38589f52-d32a-40a2-b3ce-221972945b26.png" width="250" align="left">
-<img src="https://user-images.githubusercontent.com/66251759/168885627-43579c20-c52f-4548-860b-672bd7cdb7fa.png" width="250">
+<img src="https://user-images.githubusercontent.com/66251759/168885627-43579c20-c52f-4548-860b-672bd7cdb7fa.png" width="250" align="left">
+<img src="https://user-images.githubusercontent.com/66251759/169665390-276c52a8-adc5-43dc-9e9b-90ff7f1822ed.png" width="250">
