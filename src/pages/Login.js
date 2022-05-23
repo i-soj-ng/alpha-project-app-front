@@ -42,6 +42,7 @@ export function Login({ navigation }) {
           <SubmitButton
             name="로그인"
             isDisabledButton={isDisabledButton}
+            onPress={() => navigation.navigate('Main')}
           />
         </View>
         <TextBelow text="아직 회원이 아니신가요?" name="회원가입" onPress={() => navigation.navigate('Signup')}/>

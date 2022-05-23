@@ -6,6 +6,7 @@ import { Login } from "./src/pages/Login";
 import { Signup } from "./src/pages/Signup";
 import { SignupAccept } from "./src/pages/SignupAccept";
 import { Nickname } from "./src/pages/Nickname";
+import { Main } from "./src/pages/Main";
 
 const Stack = createStackNavigator();
 
@@ -17,6 +18,7 @@ const App = () => {
         <Stack.Screen name='Signup' component={Signup} />
         <Stack.Screen name='SignupAccept' component={SignupAccept} />
         <Stack.Screen name='Nickname' component={Nickname} />
+        <Stack.Screen name='Main' component={Main} />
       </Stack.Navigator>
     </NavigationContainer>
   );

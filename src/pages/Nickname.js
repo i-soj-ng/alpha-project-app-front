@@ -38,7 +38,11 @@ export function Nickname({ navigation }) {
             <TextInput style={styles.textInput} onChangeText={setNickName} maxLength={15}/>
             <Text style={styles.countText}>{count}/15</Text>
           </View>
-          <SubmitButton name="가입완료" isDisabledButton={isDisabledButton}/>
+          <SubmitButton
+            name="가입완료"
+            isDisabledButton={isDisabledButton}
+            onPress={() => navigation.navigate('Login')}
+          />
         </View>
       </View>
     </View>

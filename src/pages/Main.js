@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   header: {
-    fontSize: fontPercentage(18),
+    fontSize: fontPercentage(20),
     fontFamily: 'ONE Mobile POP OTF',
     fontWeight: '400',
     color: '#A6C9FF',
