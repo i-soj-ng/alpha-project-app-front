@@ -1,16 +1,20 @@
 import React, { useEffect } from "react";
 import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
+
 import { SubmitButton } from "../components/user_service/SubmitButton";
 import { CheckMark } from "../components/user_service/CheckMark";
+
 import { fontPercentage, heightPercentage, widthPercentage } from "../../ResponsiveSize";
 
 export function SignupAccept({ navigation }) {
   const [isDisabledButton, setIsDisabledButton] = React.useState(true);
+
   const [allCheck, setAllCheck] = React.useState(false);
   const [firstCheck, setFirstCheck] = React.useState(false);
   const [secondCheck, setSecondCheck] = React.useState(false);
   const [thirdCheck, setThirdCheck] = React.useState(false);
 
+  // 전체동의 체크 활성화 및 확인 버튼 활성화
   useEffect(() => {
     if (firstCheck === true && secondCheck === true) {
       setIsDisabledButton(false);

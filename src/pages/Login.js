@@ -1,12 +1,13 @@
 import React from 'react';
+import { StyleSheet, Text, View } from "react-native";
+import CheckBox from "@react-native-community/checkbox";
 
 import { EmailInput } from "../components/user_service/EmailInput";
-import { StyleSheet, Text, View } from "react-native";
-import { fontPercentage, heightPercentage, widthPercentage } from "../../ResponsiveSize";
 import { PasswordInput } from "../components/user_service/PasswordInput";
 import { SubmitButton } from "../components/user_service/SubmitButton";
-import CheckBox from "@react-native-community/checkbox";
 import { TextBelow } from "../components/user_service/TextBelow";
+
+import { fontPercentage, heightPercentage, widthPercentage } from "../../ResponsiveSize";
 
 export function Login({ navigation }) {
   const [email, setEmail] = React.useState('');

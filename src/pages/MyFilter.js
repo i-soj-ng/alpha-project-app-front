@@ -1,8 +1,9 @@
 import React from 'react';
 import { deg } from "react-native-linear-gradient-degree";
 import LinearGradient from "react-native-linear-gradient";
-import { Image, Text, View, StyleSheet, TouchableOpacity, Button } from "react-native";
+import { Image, Text, View, StyleSheet, TouchableOpacity } from "react-native";
 import { Header } from "../components/main_page/Header";
+
 import { fontPercentage, heightPercentage, widthPercentage } from "../../ResponsiveSize";
 
 export function MyFilter() {

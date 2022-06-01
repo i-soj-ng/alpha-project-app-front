@@ -1,12 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from "react-native";
+
 import LinearGradient from "react-native-linear-gradient";
 import { deg } from "react-native-linear-gradient-degree";
-import { fontPercentage, widthPercentage, heightPercentage } from "../../ResponsiveSize";
+
 import { Thumbnail } from "../components/main_page/Thumbnail";
 import { ModalView } from "../components/main_page/ModalView";
-import { NavigationContainer } from '@react-navigation/native';
-import { TabNavigation } from '../navigations/TabNavigation';
+
+import { fontPercentage, widthPercentage, heightPercentage } from "../../ResponsiveSize";
 
 export function Main() {
   const [modalVisible, setModalVisible] = React.useState(false);

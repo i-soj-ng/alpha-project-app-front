@@ -8,6 +8,7 @@ export function Nickname({ navigation }) {
   const [count, setCount] = React.useState(0);
   const [isDisabledButton, setIsDisabledButton] = React.useState(true);
 
+  // 가입완료 버튼 활성화
   useEffect(() => {
     setCount(nickName.length);
     if (nickName.length > 0) {

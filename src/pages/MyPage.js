@@ -2,8 +2,8 @@ import React from 'react';
 import { deg } from "react-native-linear-gradient-degree";
 import LinearGradient from "react-native-linear-gradient";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+
 import { fontPercentage, heightPercentage, widthPercentage } from "../../ResponsiveSize";
-import { Thumbnail } from "../components/main_page/Thumbnail";
 
 export function MyPage({ navigation }) {
   return (

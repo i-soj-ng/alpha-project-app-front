@@ -1,16 +1,18 @@
 import React from 'react';
+import { StyleSheet, Text, View, Image } from "react-native";
 
 import { EmailInput } from "../components/user_service/EmailInput";
-import { StyleSheet, Text, View, Image } from "react-native";
-import { fontPercentage, heightPercentage, widthPercentage } from "../../ResponsiveSize";
 import { PasswordInput, CheckPasswordInput } from "../components/user_service/PasswordInput";
 import { SubmitButton } from "../components/user_service/SubmitButton";
 import { TextBelow } from "../components/user_service/TextBelow";
+
+import { fontPercentage, heightPercentage, widthPercentage } from "../../ResponsiveSize";
 
 export function Signup({ navigation }) {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [rePassword, setRePassword] = React.useState('');
+
   const [isDisabledButton, setIsDisabledButton] = React.useState(true);
   const [isEmailChecked, setIsEmailChecked] = React.useState(false);
 
@@ -29,6 +31,8 @@ export function Signup({ navigation }) {
               setIsDisabledButton={setIsDisabledButton}
               setIsEmailChecked={setIsEmailChecked}
             />
+
+            {/* 이메일이 형식에 맞을 경우 v 표시가 나타남 */}
             {
               isEmailChecked === true
               ?<Image

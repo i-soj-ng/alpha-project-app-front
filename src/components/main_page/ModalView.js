@@ -1,7 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text, View, Modal, TouchableOpacity } from "react-native";
-import { fontPercentage, heightPercentage, widthPercentage } from "../../../ResponsiveSize";
-import { rgbaColor } from "react-native-reanimated/lib/types/lib/reanimated2";
 
 export function ModalView(props) {
   return (
