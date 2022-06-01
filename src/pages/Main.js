@@ -56,9 +56,6 @@ export function Main() {
             <Thumbnail isDeleted={setModalVisible}/>
           </View>
         </View>
-        {/*<NavigationContainer>*/}
-        {/*  <TabNavigation />*/}
-        {/*</NavigationContainer>*/}
       </LinearGradient>
     </LinearGradient>
   );
