@@ -1,13 +1,16 @@
 import React from 'react';
+import 'react-native-gesture-handler';
+
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
-import 'react-native-gesture-handler';
+
 import { Login } from "./src/pages/Login";
 import { Signup } from "./src/pages/Signup";
 import { SignupAccept } from "./src/pages/SignupAccept";
 import { Nickname } from "./src/pages/Nickname";
-import { Main } from "./src/pages/Main";
 import { TabNavigation } from "./src/navigations/TabNavigation";
+import { MyFilter } from "./src/pages/MyFilter";
+import { QRPop } from "./src/pages/QRPop";
 
 const Stack = createStackNavigator();
 
@@ -20,6 +23,8 @@ const App = () => {
         <Stack.Screen name='SignupAccept' component={SignupAccept} />
         <Stack.Screen name='Nickname' component={Nickname} />
         <Stack.Screen name='Main' component={TabNavigation} />
+        <Stack.Screen name='MyFilter' component={MyFilter} />
+        <Stack.Screen name='QRPop' component={QRPop} />
       </Stack.Navigator>
     </NavigationContainer>
   );

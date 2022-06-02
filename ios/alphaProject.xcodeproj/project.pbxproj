@@ -19,6 +19,7 @@
 		A32813DA0002473E89FB1CD4 /* NanumSquareRoundR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F0A6F24EB384DFCA2873233 /* NanumSquareRoundR.ttf */; };
 		FA82CF21AED44BACA94FB718 /* NanumSquareRoundB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B19829A4DA8D4F688C0E74B0 /* NanumSquareRoundB.ttf */; };
 		1584FA546E4542CE864B9DC5 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 30BCD8083C07497E98978213 /* NotoSansKR-Regular.otf */; };
+		928B9BBDFCF742DEBD06CC25 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F67364A623D349E28D69EC27 /* NotoSansKR-Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FABC81F6228944569F3A0E26 /* ONEMobilePOP.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = ONEMobilePOP.ttf; path = ../src/assets/fonts/ONEMobilePOP.ttf; sourceTree = "<group>"; };
 		30BCD8083C07497E98978213 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; name = "NotoSansKR-Regular.otf"; path = "../src/assets/fonts/NotoSansKR-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F67364A623D349E28D69EC27 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; name = "NotoSansKR-Bold.otf"; path = "../src/assets/fonts/NotoSansKR-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				FABC81F6228944569F3A0E26 /* ONEMobilePOP.ttf */,
 				098785D500FB47B59BCFC04E /* ONE Mobile POP OTF.otf */,
 				30BCD8083C07497E98978213 /* NotoSansKR-Regular.otf */,
+				F67364A623D349E28D69EC27 /* NotoSansKR-Bold.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				FA82CF21AED44BACA94FB718 /* NanumSquareRoundB.ttf in Resources */,
 				22FF433D94194136BD4DAEF9 /* ONE Mobile POP OTF.otf in Resources */,
 				1584FA546E4542CE864B9DC5 /* NotoSansKR-Regular.otf in Resources */,
+				928B9BBDFCF742DEBD06CC25 /* NotoSansKR-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,14 +2,19 @@ import React from 'react';
 import { View, Image, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { fontPercentage, widthPercentage, heightPercentage } from "../../../ResponsiveSize";
 
-export function Thumbnail(props) {
+export function Thumbnail({ props, navigation }) {
   return (
-    <View style={{position: 'relative', marginRight: widthPercentage(22), marginBottom: heightPercentage(20)}}>
-      <Image
-        source={require('../../assets/images/thumbnail-image.png')}
-        style={styles.image}
-      />
-      <TouchableOpacity style={styles.deleteButton} onPress={() => props.isDeleted(true)}>
+    <View style={styles.thumbnailView}>
+      <TouchableOpacity onPress={() => console.log("썸네일...")}>
+        <Image
+          source={require('../../assets/images/thumbnail-image.png')}
+          style={styles.image}
+        />
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.deleteButton}
+        onPress={() => props.isDeleted(true)}
+      >
         <Image
           source={require('../../assets/images/x-vector.png')}
         />
@@ -27,6 +32,11 @@ export function Thumbnail(props) {
 }
 
 const styles = StyleSheet.create({
+  thumbnailView: {
+    position: 'relative',
+    marginRight: widthPercentage(22),
+    marginBottom: heightPercentage(20),
+  },
   image: {
     width: widthPercentage(160),
     height: heightPercentage(160),
