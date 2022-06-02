@@ -12,7 +12,8 @@ export function Header(props, { navigation }) {
           left: widthPercentage(16),
           top: heightPercentage(63),
         }}
-        onPress={() => navigation.pop()}>
+        onPress={() => navigation.pop()}
+      >
         <Image source={require('../../assets/images/right-arrow.png')} />
       </TouchableOpacity>
       <TouchableOpacity
@@ -21,7 +22,9 @@ export function Header(props, { navigation }) {
           right: widthPercentage(16),
           top: heightPercentage(63),
         }}
-        onPress={() => navigation.pop()}>
+        onPress={() => props.setShowMenu(true)}
+        activeOpacity={0.7}
+      >
         <Image source={require('../../assets/images/menu.png')} />
       </TouchableOpacity>
     </View>
