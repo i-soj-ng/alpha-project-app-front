@@ -12,14 +12,12 @@ const Tab = createBottomTabNavigator();
 
 export function TabNavigation() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator screenOptions={{headerShown: false}}>
-        <Tab.Screen name='Camera' component={Main} />
-        <Tab.Screen name='Likes' component={Likes} />
-        <Tab.Screen name='LookAround' component={LookAround} />
-        <Tab.Screen name='MakeFilter' component={MakeFilter} />
-        <Tab.Screen name='MyPage' component={MyPage} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <Tab.Navigator screenOptions={{headerShown: false}}>
+      <Tab.Screen name='Camera' component={Main} />
+      <Tab.Screen name='Likes' component={Likes} />
+      <Tab.Screen name='LookAround' component={LookAround} />
+      <Tab.Screen name='MakeFilter' component={MakeFilter} />
+      <Tab.Screen name='MyPage' component={MyPage} />
+    </Tab.Navigator>
   );
 }

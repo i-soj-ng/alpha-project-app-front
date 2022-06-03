@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { fontPercentage, heightPercentage, widthPercentage } from "../../../ResponsiveSize";
 
-export function Header(props, { navigation }) {
+export function Header(props) {
   return (
     <View style={{alignItems: 'center'}}>
       <Text style={styles.header}>{props.title}</Text>
@@ -12,7 +12,7 @@ export function Header(props, { navigation }) {
           left: widthPercentage(16),
           top: heightPercentage(63),
         }}
-        onPress={() => navigation.pop()}
+        onPress={props.onPress}
       >
         <Image source={require('../../assets/images/right-arrow.png')} />
       </TouchableOpacity>

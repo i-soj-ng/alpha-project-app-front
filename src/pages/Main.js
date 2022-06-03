@@ -9,7 +9,7 @@ import { ModalView } from "../components/main_page/ModalView";
 
 import { fontPercentage, widthPercentage, heightPercentage } from "../../ResponsiveSize";
 
-export function Main() {
+export function Main({ navigation }) {
   const [modalVisible, setModalVisible] = React.useState(false);
 
   return (
@@ -45,16 +45,34 @@ export function Main() {
           marginTop: heightPercentage(24),
         }}>
           <View style={{flexDirection: 'row'}}>
-            <Thumbnail isDeleted={setModalVisible}/>
-            <Thumbnail isDeleted={setModalVisible}/>
+            <Thumbnail
+              isDeleted={setModalVisible}
+              onPress={() => navigation.navigate('MyFilter')}
+            />
+            <Thumbnail
+              isDeleted={setModalVisible}
+              onPress={() => navigation.navigate('MyFilter')}
+            />
           </View>
           <View style={{flexDirection: 'row'}}>
-            <Thumbnail isDeleted={setModalVisible}/>
-            <Thumbnail isDeleted={setModalVisible}/>
+            <Thumbnail
+              isDeleted={setModalVisible}
+              onPress={() => navigation.navigate('MyFilter')}
+            />
+            <Thumbnail
+              isDeleted={setModalVisible}
+              onPress={() => navigation.navigate('MyFilter')}
+            />
           </View>
           <View style={{flexDirection: 'row'}}>
-            <Thumbnail isDeleted={setModalVisible}/>
-            <Thumbnail isDeleted={setModalVisible}/>
+            <Thumbnail
+              isDeleted={setModalVisible}
+              onPress={() => navigation.navigate('MyFilter')}
+            />
+            <Thumbnail
+              isDeleted={setModalVisible}
+              onPress={() => navigation.navigate('MyFilter')}
+            />
           </View>
         </View>
       </LinearGradient>

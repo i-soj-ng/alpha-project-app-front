@@ -7,7 +7,7 @@ import { Header } from "../components/main_page/Header";
 import { fontPercentage, heightPercentage, widthPercentage } from "../../ResponsiveSize";
 import { MenuModal } from "../components/main_page/MenuModal";
 
-export function MyFilter() {
+export function MyFilter({ navigation }) {
   const [showMenu, setShowMenu] = React.useState(false);
 
   return (
@@ -24,7 +24,12 @@ export function MyFilter() {
           "rgba(229, 241, 255, 0.4) 0%",
           "rgba(221, 229, 250, 0.4) 100%"
         ]} {...deg(180)}>
-        <Header title="내 필터" setShowMenu={setShowMenu} showMenu={showMenu}/>
+        <Header
+          title="내 필터"
+          setShowMenu={setShowMenu}
+          showMenu={showMenu}
+          onPress={() => navigation.pop()}
+        />
         <MenuModal showMenu={showMenu} setShowMenu={setShowMenu}/>
         <View style={{width: '100%', alignItems: 'center', marginTop: heightPercentage(32)}}>
           <View style={styles.image}>

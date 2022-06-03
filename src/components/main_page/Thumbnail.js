@@ -2,10 +2,10 @@ import React from 'react';
 import { View, Image, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { fontPercentage, widthPercentage, heightPercentage } from "../../../ResponsiveSize";
 
-export function Thumbnail({ props, navigation }) {
+export function Thumbnail(props) {
   return (
     <View style={styles.thumbnailView}>
-      <TouchableOpacity onPress={() => console.log("썸네일...")}>
+      <TouchableOpacity onPress={props.onPress} activeOpacity={0.8}>
         <Image
           source={require('../../assets/images/thumbnail-image.png')}
           style={styles.image}
