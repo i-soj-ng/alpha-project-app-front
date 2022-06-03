@@ -9,7 +9,6 @@ import { Signup } from "./src/pages/Signup";
 import { SignupAccept } from "./src/pages/SignupAccept";
 import { Nickname } from "./src/pages/Nickname";
 import { TabNavigation } from "./src/navigations/TabNavigation";
-import { MainStackNavigation } from "./src/navigations/MainStackNavigation";
 import { MyFilter } from "./src/pages/MyFilter";
 import { QRPop } from "./src/pages/QRPop";
 

@@ -6,7 +6,7 @@ import LinearGradient from "react-native-linear-gradient";
 import { fontPercentage, heightPercentage, widthPercentage } from "../../ResponsiveSize";
 import { MenuModal } from "../components/main_page/MenuModal";
 
-export function QRPop() {
+export function QRPop({ navigation }) {
   const [showMenu, setShowMenu] = React.useState(false);
 
   return (
@@ -23,7 +23,12 @@ export function QRPop() {
           "rgba(229, 241, 255, 0.4) 0%",
           "rgba(221, 229, 250, 0.4) 100%"
         ]} {...deg(180)}>
-        <Header title="QR Pop"  setShowMenu={setShowMenu} showMenu={showMenu}/>
+        <Header
+          title="QR Pop"
+          setShowMenu={setShowMenu}
+          showMenu={showMenu}
+          onPress={() => navigation.pop()}
+        />
         <MenuModal showMenu={showMenu} setShowMenu={setShowMenu}/>
         <View style={styles.parentView}>
           <View style={styles.QRView}>

@@ -65,7 +65,11 @@ export function MyFilter({ navigation }) {
               <Text style={styles.detailText}>2022.04.05</Text>
             </View>
           </View>
-          <TouchableOpacity style={styles.button} activeOpacity={1.0}>
+          <TouchableOpacity
+            style={styles.button}
+            activeOpacity={1.0}
+            onPress={() => navigation.navigate('QRPop')}
+          >
             <Text style={styles.buttonText}>사용하기</Text>
           </TouchableOpacity>
         </View>
