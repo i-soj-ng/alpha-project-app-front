@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 
 import LinearGradient from "react-native-linear-gradient";
 import { deg } from "react-native-linear-gradient-degree";
@@ -27,7 +27,13 @@ export function Main({ navigation }) {
           "rgba(221, 229, 250, 0.4) 100%"
         ]} {...deg(180)}>
         <View style={{alignItems: 'center'}}>
-          <Text style={styles.header}>PHOTOBUBBLE</Text>
+          <Image
+            style={styles.header}
+            source={require('../assets/images/logo.png')}/>
+          <TouchableOpacity style={styles.camera}>
+            <Image
+              source={require('../assets/images/camera-icon.png')}/>
+          </TouchableOpacity>
         </View>
         <ModalView isReveal={modalVisible} isClose={setModalVisible}/>
         <View style={styles.alignView}>
@@ -74,6 +80,16 @@ export function Main({ navigation }) {
               onPress={() => navigation.navigate('MyFilter')}
             />
           </View>
+          <View style={{flexDirection: 'row'}}>
+            <Thumbnail
+              isDeleted={setModalVisible}
+              onPress={() => navigation.navigate('MyFilter')}
+            />
+            <Thumbnail
+              isDeleted={setModalVisible}
+              onPress={() => navigation.navigate('MyFilter')}
+            />
+          </View>
         </View>
       </LinearGradient>
     </LinearGradient>
@@ -82,11 +98,12 @@ export function Main({ navigation }) {
 
 const styles = StyleSheet.create({
   header: {
-    fontSize: fontPercentage(20),
-    fontFamily: 'ONE Mobile POP OTF',
-    fontWeight: '400',
-    color: '#A6C9FF',
     marginTop: heightPercentage(66),
+  },
+  camera: {
+    position: 'absolute',
+    right: widthPercentage(15),
+    top: heightPercentage(56),
   },
   alignView: {
     flexDirection: 'row',
