@@ -17,4 +17,5 @@ React Native, Node.js
 
 3. 메인 화면 (내 필터)
 <img src="https://user-images.githubusercontent.com/66251759/172012339-a369a307-7881-4fc7-9877-85a3f8f2fb3f.png" width="250" align="left">
-<img src="https://user-images.githubusercontent.com/66251759/171612051-bd8e16ed-7598-4496-9b61-f9e16130650e.png" width="250">
+<img src="https://user-images.githubusercontent.com/66251759/171612051-bd8e16ed-7598-4496-9b61-f9e16130650e.png" width="250" align="left">
+<img src="https://user-images.githubusercontent.com/66251759/172013421-650566a5-f1c8-4523-9eed-9ca05b12a24e.png" width="250">
