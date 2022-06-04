@@ -29,7 +29,7 @@ export function MakeFilter({ navigation }) {
               left: widthPercentage(16),
               top: heightPercentage(63),
             }}
-            onPress={() => navigation.navigate('Home')}
+            onPress={() => navigation.navigate('Main')}
           >
             <Image source={require('../assets/images/right-arrow.png')} />
           </TouchableOpacity>

@@ -46,7 +46,7 @@ export function QRPop({ navigation }) {
         <TouchableOpacity
           style={styles.button}
           activeOpacity={1.0}
-          onPress={() => navigation.navigate('Main')}
+          onPress={() => navigation.navigate('MainHome')}
         >
           <Text style={styles.buttonText}>홈으로 돌아가기</Text>
         </TouchableOpacity>

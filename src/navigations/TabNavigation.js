@@ -8,21 +8,20 @@ import { LookAround } from "../pages/LookAround";
 import { MakeFilter } from "../pages/MakeFilter";
 import { MyPage } from "../pages/MyPage";
 import { Main } from "../pages/Main";
-import {MakeFilterNavigation} from "./MakeFilterNavigation";
 
 import { heightPercentage, widthPercentage } from "../../ResponsiveSize";
 
 const Tab = createBottomTabNavigator();
 
-export function TabNavigation({ navigation }) {
+export function TabNavigation() {
   return (
     <Tab.Navigator
-      screenOptions={({ route }) => ({
+      screenOptions={{
         headerShown: false,
         tabBarStyle: styles.tab,
         tabBarShowLabel: false,
         tabBarVisible: false,
-      })}>
+      }}>
       <Tab.Screen
         name='Home'
         component={Main}
@@ -54,7 +53,7 @@ export function TabNavigation({ navigation }) {
       />
       <Tab.Screen
         name='MakeFilter'
-        component={MakeFilterNavigation}
+        component={MakeFilter}
         options={({ navigation }) => ({
           tabBarButton: (props) => (
             <TouchableOpacity
