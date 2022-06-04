@@ -26,7 +26,7 @@ const App = () => {
         <Stack.Screen name='Main' component={TabNavigation} />
         <Stack.Screen name='MyFilter' component={MyFilter} />
         <Stack.Screen name='QRPop' component={QRPop} />
-        <Stack.Screen name='MakeFilter' component={MakeFilter} />
+        <Stack.Screen name='MakingFilter' component={MakeFilter} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -7,7 +7,7 @@ export function Thumbnail(props) {
     <View style={styles.thumbnailView}>
       <TouchableOpacity onPress={props.onPress} activeOpacity={0.8}>
         <Image
-          source={require('../../assets/images/thumbnail-image.png')}
+          source={require('../../assets/images/sample-images/thumbnail-image.png')}
           style={styles.image}
         />
       </TouchableOpacity>

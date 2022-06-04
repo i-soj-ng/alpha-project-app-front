@@ -33,7 +33,7 @@ export function QRPop({ navigation }) {
         <View style={styles.parentView}>
           <View style={styles.QRView}>
             <Image
-              source={require('../assets/images/QR-sample.png')}
+              source={require('../assets/images/sample-images/QR-sample.png')}
               style={styles.QRImage}
             />
             <Text style={styles.QRText}>코드: 24D83445A</Text>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Image } from "react-native";
+import { StyleSheet, Image, TouchableOpacity } from "react-native";
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
@@ -8,19 +8,21 @@ import { LookAround } from "../pages/LookAround";
 import { MakeFilter } from "../pages/MakeFilter";
 import { MyPage } from "../pages/MyPage";
 import { Main } from "../pages/Main";
+import {MakeFilterNavigation} from "./MakeFilterNavigation";
 
 import { heightPercentage, widthPercentage } from "../../ResponsiveSize";
 
 const Tab = createBottomTabNavigator();
 
-export function TabNavigation() {
+export function TabNavigation({ navigation }) {
   return (
     <Tab.Navigator
-      screenOptions={{
+      screenOptions={({ route }) => ({
         headerShown: false,
         tabBarStyle: styles.tab,
         tabBarShowLabel: false,
-      }}>
+        tabBarVisible: false,
+      })}>
       <Tab.Screen
         name='Home'
         component={Main}
@@ -31,8 +33,7 @@ export function TabNavigation() {
               style={{
                 width: widthPercentage(40),
                 height: heightPercentage(40),
-              }}
-            />
+              }}/>
           ),
         }}
       />
@@ -47,27 +48,29 @@ export function TabNavigation() {
               style={{
                 width: widthPercentage(40),
                 height: heightPercentage(40),
-              }}
-            />
+              }}/>
           ),
         }}
       />
       <Tab.Screen
         name='MakeFilter'
-        component={MakeFilter}
-        options={{
-          tabBarIcon: () => (
-            <Image
-              source={require('../assets/images/tab-bar-icons/add.png')}
-              style={{
-                width: widthPercentage(50),
-                height: heightPercentage(50),
-                position: 'absolute',
-                top: widthPercentage(-12),
-              }}
-            />
+        component={MakeFilterNavigation}
+        options={({ navigation }) => ({
+          tabBarButton: (props) => (
+            <TouchableOpacity
+              {...props}
+              onPress={() => navigation.navigate('MakingFilter')}>
+              <Image
+                source={require('../assets/images/tab-bar-icons/add.png')}
+                style={{
+                  width: widthPercentage(50),
+                  height: heightPercentage(50),
+                  position: 'absolute',
+                  top: widthPercentage(-12),
+                }}/>
+            </TouchableOpacity>
           ),
-        }}
+        })}
       />
       <Tab.Screen
         name='Likes'
@@ -79,8 +82,7 @@ export function TabNavigation() {
               style={{
                 width: widthPercentage(40),
                 height: heightPercentage(40),
-              }}
-            />
+              }}/>
           ),
         }}
       />
@@ -94,8 +96,7 @@ export function TabNavigation() {
               style={{
                 width: widthPercentage(40),
                 height: heightPercentage(40),
-              }}
-            />
+              }}/>
           ),
         }}
       />

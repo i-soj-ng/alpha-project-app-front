@@ -3,8 +3,8 @@ import { fontPercentage, heightPercentage, widthPercentage } from "../../../Resp
 import { Image, Text, TouchableOpacity, View } from "react-native";
 
 export function CheckMark(props) {
-  const [allCheckMark, setAllCheckMark] = React.useState(require('../../assets/images/gray-check-circle.png'))
-  const [checkMark, setCheckMark] = React.useState(require('../../assets/images/gray-check-mark.png'))
+  const [allCheckMark, setAllCheckMark] = React.useState(require('../../assets/images/login-signup-icons/gray-check-circle.png'))
+  const [checkMark, setCheckMark] = React.useState(require('../../assets/images/login-signup-icons/gray-check-mark.png'))
 
   if (props.name === "entire-accept") {
     const onCheckPress = () => {
@@ -23,9 +23,9 @@ export function CheckMark(props) {
 
     useEffect(() => {
       if (props.isChecked === true) {
-        setAllCheckMark(require('../../assets/images/blue-check-circle.png'));
+        setAllCheckMark(require('../../assets/images/login-signup-icons/blue-check-circle.png'));
       } else {
-        setAllCheckMark(require('../../assets/images/gray-check-circle.png'));
+        setAllCheckMark(require('../../assets/images/login-signup-icons/gray-check-circle.png'));
       }
     },[props.isChecked]);
 
@@ -56,10 +56,10 @@ export function CheckMark(props) {
 
     useEffect(() => {
       if (props.isChecked === true) {
-        setCheckMark(require('../../assets/images/big-blue-check-mark.png'));
+        setCheckMark(require('../../assets/images/login-signup-icons/big-blue-check-mark.png'));
         props.setCheck(true);
       } else {
-        setCheckMark(require('../../assets/images/gray-check-mark.png'));
+        setCheckMark(require('../../assets/images/login-signup-icons/gray-check-mark.png'));
       }
     },[props.isChecked]);
 

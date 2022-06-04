@@ -6,7 +6,7 @@ export function PasswordInput(props) {
   const [password, setPassword] = React.useState('');
   const [pwInputStyle, setPwInputStyle] = React.useState(styles.input);
   const [showPw, setShowPw] = React.useState(true);
-  const [pwIcon, setPwIcon] = React.useState(require('../../assets/images/eye.png'));
+  const [pwIcon, setPwIcon] = React.useState(require('../../assets/images/login-signup-icons/eye.png'));
   const [isRevealIcon, setIsRevealIcon] = React.useState(false);
   const [isPwChecked, setIsPwChecked] = React.useState(false);
 
@@ -23,9 +23,9 @@ export function PasswordInput(props) {
   const OnEyePress = () => {
     setShowPw(!showPw);
     if (showPw === true) {
-      setPwIcon(require('../../assets/images/eye-hide.png'));
+      setPwIcon(require('../../assets/images/login-signup-icons/eye-hide.png'));
     } else {
-      setPwIcon(require('../../assets/images/eye.png'));
+      setPwIcon(require('../../assets/images/login-signup-icons/eye.png'));
     }
   };
 
@@ -53,7 +53,6 @@ export function PasswordInput(props) {
             if (props.title === "signup") {
               if (props.email && password.length > 3) {
                 setIsPwChecked(true);
-                console.log("password= ", password)
               } else {
                 setIsPwChecked(false);
               }
@@ -81,7 +80,7 @@ export function PasswordInput(props) {
                   <Image source={pwIcon} />
                 </TouchableOpacity>
                 <Image
-                  source={require('../../assets/images/blue-check-mark.png')}
+                  source={require('../../assets/images/login-signup-icons/blue-check-mark.png')}
                   style={{
                     position: 'absolute',
                     left: widthPercentage(319),
@@ -111,7 +110,7 @@ export function CheckPasswordInput(props) {
   const [rePassword, setRePassword] = React.useState('');
   const [pwInputStyle, setPwInputStyle] = React.useState(styles.input);
   const [showPw, setShowPw] = React.useState(true);
-  const [pwIcon, setPwIcon] = React.useState(require('../../assets/images/eye.png'));
+  const [pwIcon, setPwIcon] = React.useState(require('../../assets/images/login-signup-icons/eye.png'));
   const [isRevealIcon, setIsRevealIcon] = React.useState(false);
   const [isPwChecked, setIsPwChecked] = React.useState(false);
 
@@ -126,9 +125,9 @@ export function CheckPasswordInput(props) {
   const OnEyePress = () => {
     setShowPw(!showPw);
     if (showPw === true) {
-      setPwIcon(require('../../assets/images/eye-hide.png'));
+      setPwIcon(require('../../assets/images/login-signup-icons/eye-hide.png'));
     } else {
-      setPwIcon(require('../../assets/images/eye.png'));
+      setPwIcon(require('../../assets/images/login-signup-icons/eye.png'));
     }
   };
 
@@ -177,7 +176,7 @@ export function CheckPasswordInput(props) {
                   <Image source={pwIcon} />
                 </TouchableOpacity>
                 <Image
-                  source={require('../../assets/images/blue-check-mark.png')}
+                  source={require('../../assets/images/login-signup-icons/blue-check-mark.png')}
                   style={{
                     position: 'absolute',
                     left: widthPercentage(319),

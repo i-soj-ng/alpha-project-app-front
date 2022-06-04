@@ -6,14 +6,18 @@ import { NavigationContainer } from "@react-navigation/native";
 
 import { Main } from "../pages/Main";
 import { MakeFilter } from "../pages/MakeFilter";
+import { TabNavigation } from "./TabNavigation";
 
 const Stack = createStackNavigator();
 
-export function MakeFilterNavigation() {
+export function MakeFilterNavigation({ navigation, route }) {
+  route.state && route.state.index === 0
+    ? navigation.setOptions({ tabBarVisible: false })
+    : navigation.setOptions({ tabBarVisible: true });
+
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
-      <Stack.Screen name='Main' component={Main} />
-      <Stack.Screen name='MakeFilter' component={MakeFilter} />
+      <Stack.Screen name='MF' component={MakeFilter} />
     </Stack.Navigator>
   );
 }

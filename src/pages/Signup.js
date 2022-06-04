@@ -36,7 +36,7 @@ export function Signup({ navigation }) {
             {
               isEmailChecked === true
               ?<Image
-                  source={require('../assets/images/blue-check-mark.png')}
+                  source={require('../assets/images/login-signup-icons/blue-check-mark.png')}
                   style={{
                     position: 'absolute',
                     left: widthPercentage(319),

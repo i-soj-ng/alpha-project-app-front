@@ -35,7 +35,7 @@ export function MyFilter({ navigation }) {
           <View style={styles.image}>
             <Image
               style={{height: '100%', width: '100%', resizeMode: 'cover'}}
-              source={require('../assets/images/sample-image.png')} />
+              source={require('../assets/images/sample-images/sample-image.png')} />
           </View>
           <View style={styles.textBox}>
             <View style={styles.eachText}>
