@@ -10,5 +10,6 @@ import { MyPage } from "./src/pages/MyPage";
 import { TabNavigation } from "./src/navigations/TabNavigation";
 import { MyFilter } from "./src/pages/MyFilter";
 import { QRPop } from "./src/pages/QRPop";
+import { MakeFilter } from "./src/pages/MakeFilter";
 
-AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent(appName, () => MakeFilter);
