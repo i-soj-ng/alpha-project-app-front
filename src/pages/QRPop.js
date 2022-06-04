@@ -43,6 +43,13 @@ export function QRPop({ navigation }) {
             QR코드가 인식되지 않는 경우 코드를 입력해주세요
           </Text>
         </View>
+        <TouchableOpacity
+          style={styles.button}
+          activeOpacity={1.0}
+          onPress={() => navigation.navigate('Main')}
+        >
+          <Text style={styles.buttonText}>홈으로 돌아가기</Text>
+        </TouchableOpacity>
       </LinearGradient>
     </LinearGradient>
   );
@@ -79,5 +86,19 @@ const styles = StyleSheet.create({
     color: '#1E396880',
     textAlign: 'center',
     lineHeight: heightPercentage(16),
+  },
+  button: {
+    width: '100%',
+    height: heightPercentage(81),
+    backgroundColor: '#A6C9FF',
+    position: 'absolute',
+    bottom: 0,
+    alignItems: 'center',
+  },
+  buttonText: {
+    fontFamily: 'NanumSquareRoundEB',
+    fontSize: fontPercentage(20),
+    color: '#FFFFFF',
+    marginTop: heightPercentage(18),
   },
 });

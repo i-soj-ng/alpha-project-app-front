@@ -31,7 +31,7 @@ export function MyFilter({ navigation }) {
           onPress={() => navigation.pop()}
         />
         <MenuModal showMenu={showMenu} setShowMenu={setShowMenu}/>
-        <View style={{width: '100%', alignItems: 'center', marginTop: heightPercentage(32)}}>
+        <View style={{width: '100%', flex: 1, alignItems: 'center', marginTop: heightPercentage(32)}}>
           <View style={styles.image}>
             <Image
               style={{height: '100%', width: '100%', resizeMode: 'cover'}}
@@ -121,9 +121,10 @@ const styles = StyleSheet.create({
   },
   button: {
     width: '100%',
-    height: '50%',
+    height: heightPercentage(81),
     backgroundColor: '#A6C9FF',
-    marginTop: heightPercentage(36),
+    position: 'absolute',
+    bottom: 0,
     alignItems: 'center',
   },
   buttonText: {

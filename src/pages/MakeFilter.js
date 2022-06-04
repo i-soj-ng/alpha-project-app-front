@@ -6,7 +6,7 @@ import LinearGradient from "react-native-linear-gradient";
 import { ChoiceBtn } from "../components/make_filter/ChoiceBtn";
 import { fontPercentage, heightPercentage, widthPercentage } from "../../ResponsiveSize";
 
-export function MakeFilter() {
+export function MakeFilter({ navigation }) {
   return (
     <LinearGradient
       style={{flex: 1}}
@@ -29,6 +29,7 @@ export function MakeFilter() {
               left: widthPercentage(16),
               top: heightPercentage(63),
             }}
+            onPress={() => navigation.navigate('Home')}
           >
             <Image source={require('../assets/images/right-arrow.png')} />
           </TouchableOpacity>

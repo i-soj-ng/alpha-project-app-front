@@ -11,6 +11,7 @@ import { Nickname } from "./src/pages/Nickname";
 import { TabNavigation } from "./src/navigations/TabNavigation";
 import { MyFilter } from "./src/pages/MyFilter";
 import { QRPop } from "./src/pages/QRPop";
+import { MakeFilter } from "./src/pages/MakeFilter";
 
 const Stack = createStackNavigator();
 
@@ -25,6 +26,7 @@ const App = () => {
         <Stack.Screen name='Main' component={TabNavigation} />
         <Stack.Screen name='MyFilter' component={MyFilter} />
         <Stack.Screen name='QRPop' component={QRPop} />
+        <Stack.Screen name='MakeFilter' component={MakeFilter} />
       </Stack.Navigator>
     </NavigationContainer>
   );

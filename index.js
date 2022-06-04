@@ -12,4 +12,4 @@ import { MyFilter } from "./src/pages/MyFilter";
 import { QRPop } from "./src/pages/QRPop";
 import { MakeFilter } from "./src/pages/MakeFilter";
 
-AppRegistry.registerComponent(appName, () => MakeFilter);
+AppRegistry.registerComponent(appName, () => App);

@@ -5,17 +5,15 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 
 import { Main } from "../pages/Main";
-import { MyFilter } from "../pages/MyFilter";
-import { QRPop } from "../pages/QRPop";
+import { MakeFilter } from "../pages/MakeFilter";
 
 const Stack = createStackNavigator();
 
-export function MainStackNavigation() {
+export function MakeFilterNavigation() {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name='Main' component={Main} />
-      <Stack.Screen name='MyFilter' component={MyFilter} />
-      <Stack.Screen name='QRPop' component={QRPop} />
+      <Stack.Screen name='MakeFilter' component={MakeFilter} />
     </Stack.Navigator>
   );
 }
