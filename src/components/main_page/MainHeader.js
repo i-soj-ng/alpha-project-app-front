@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { fontPercentage, heightPercentage, widthPercentage } from "../../../ResponsiveSize";
 
-export function Header(props) {
+export function MainHeader(props) {
   return (
     <View style={{alignItems: 'center'}}>
       <Text style={styles.header}>{props.title}</Text>

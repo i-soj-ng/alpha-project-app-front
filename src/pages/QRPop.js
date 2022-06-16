@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, Text, TouchableOpacity, View, StyleSheet } from "react-native";
-import { Header } from "../components/main_page/Header";
+import { MainHeader } from "../components/main_page/MainHeader";
 import { deg } from "react-native-linear-gradient-degree";
 import LinearGradient from "react-native-linear-gradient";
 import { fontPercentage, heightPercentage, widthPercentage } from "../../ResponsiveSize";
@@ -23,7 +23,7 @@ export function QRPop({ navigation }) {
           "rgba(229, 241, 255, 0.4) 0%",
           "rgba(221, 229, 250, 0.4) 100%"
         ]} {...deg(180)}>
-        <Header
+        <MainHeader
           title="QR Pop"
           setShowMenu={setShowMenu}
           showMenu={showMenu}

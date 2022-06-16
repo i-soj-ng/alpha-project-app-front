@@ -11,5 +11,6 @@ import { TabNavigation } from "./src/navigations/TabNavigation";
 import { MyFilter } from "./src/pages/MyFilter";
 import { QRPop } from "./src/pages/QRPop";
 import { MakeFilter } from "./src/pages/MakeFilter";
+import { MakeAccessory } from "./src/pages/MakeAccessory";
 
-AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent(appName, () => MakeAccessory);
