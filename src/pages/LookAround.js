@@ -4,6 +4,7 @@ import { LAHeader } from "../components/look_around/LAHeader";
 import { SearchBar } from "../components/look_around/SearchBar";
 import { CategoryButton } from "../components/look_around/CategoryButton";
 import { Content } from "../components/look_around/Content";
+import { CategoryModal } from "../components/look_around/CategoryModal";
 
 import LinearGradient from "react-native-linear-gradient";
 import { deg } from "react-native-linear-gradient-degree";
@@ -11,6 +12,8 @@ import { deg } from "react-native-linear-gradient-degree";
 import { fontPercentage, heightPercentage, widthPercentage } from "../../ResponsiveSize";
 
 export function LookAround() {
+  const [showModal, setShowModal] = React.useState(false);
+
   return (
     <LinearGradient
       style={{flex: 1}}
@@ -29,7 +32,11 @@ export function LookAround() {
         <View>
           <SearchBar/>
           <View style={styles.buttonView}>
-            <CategoryButton title="촬영 인원" width={widthPercentage(63)}/>
+            <CategoryButton
+              title="촬영 인원"
+              width={widthPercentage(63)}
+              isClicked={setShowModal}
+            />
             <CategoryButton title="프레임 종류" width={widthPercentage(74)}/>
             <CategoryButton title="프레임 컷수" width={widthPercentage(74)}/>
           </View>
@@ -63,6 +70,7 @@ export function LookAround() {
             </View>
           </ScrollView>
         </View>
+        <CategoryModal showModal={showModal} setShowModal={setShowModal}/>
       </LinearGradient>
     </LinearGradient>
   );

@@ -10,7 +10,10 @@ export function CategoryButton(props) {
         width: props.width,
         marginRight: widthPercentage(10),
       }}>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => props.isClicked(true)}
+      >
         <Text style={styles.buttonText}>{props.title}</Text>
       </TouchableOpacity>
     </View>
