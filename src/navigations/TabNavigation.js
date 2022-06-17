@@ -40,7 +40,6 @@ export function TabNavigation() {
         name='LookAround'
         component={LookAround}
         options={{
-          tabBarShowLabel: true,
           tabBarIcon: () => (
             <Image
               source={require('../assets/images/tab-bar-icons/tab-eye.png')}

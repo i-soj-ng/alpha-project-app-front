@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, Text, TouchableOpacity, View, StyleSheet } from "react-native";
 import { fontPercentage, heightPercentage, widthPercentage } from "../../../ResponsiveSize";
 
-export function Header(props) {
+export function MFHeader(props) {
   return (
     <View style={styles.parentView}>
       <Image source={require('../../assets/images/making-page-icons/frame-icon.png')}/>

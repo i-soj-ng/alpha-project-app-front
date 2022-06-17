@@ -5,7 +5,7 @@ import { Image, Text, TouchableOpacity, View, StyleSheet } from "react-native";
 import { fontPercentage, heightPercentage, widthPercentage } from "../../ResponsiveSize";
 import Icon from '../assets/images/one-person.svg'
 
-import { Header } from "../components/make_filter/Header";
+import { MFHeader } from "../components/make_filter/MFHeader";
 
 export function MakeAccessory() {
   return (
@@ -22,7 +22,7 @@ export function MakeAccessory() {
           "rgba(229, 241, 255, 0.4) 0%",
           "rgba(221, 229, 250, 0.4) 100%"
         ]} {...deg(180)}>
-        <Header name="프레임"/>
+        <MFHeader name="프레임"/>
         <View style={styles.mainView}>
           <Text style={styles.centerText}>소품 눌러보며 착용샷 보기</Text>
         </View>

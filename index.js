@@ -12,5 +12,6 @@ import { MyFilter } from "./src/pages/MyFilter";
 import { QRPop } from "./src/pages/QRPop";
 import { MakeFilter } from "./src/pages/MakeFilter";
 import { MakeAccessory } from "./src/pages/MakeAccessory";
+import { LookAround } from "./src/pages/LookAround";
 
-AppRegistry.registerComponent(appName, () => MakeAccessory);
+AppRegistry.registerComponent(appName, () => App);
