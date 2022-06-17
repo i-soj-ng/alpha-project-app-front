@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from "react-native";
 
 import LinearGradient from "react-native-linear-gradient";
 import { deg } from "react-native-linear-gradient-degree";
@@ -46,51 +46,53 @@ export function Main({ navigation }) {
           />
           <Text style={styles.alignText}>제작순</Text>
         </View>
-        <View style={{
-          marginLeft: widthPercentage(24),
-          marginTop: heightPercentage(24),
-        }}>
-          <View style={{flexDirection: 'row'}}>
-            <Thumbnail
-              isDeleted={setModalVisible}
-              onPress={() => navigation.navigate('MyFilter')}
-            />
-            <Thumbnail
-              isDeleted={setModalVisible}
-              onPress={() => navigation.navigate('MyFilter')}
-            />
+        <ScrollView>
+          <View style={{
+            marginLeft: widthPercentage(24),
+            marginTop: heightPercentage(24),
+          }}>
+            <View style={{flexDirection: 'row'}}>
+              <Thumbnail
+                isDeleted={setModalVisible}
+                onPress={() => navigation.navigate('MyFilter')}
+              />
+              <Thumbnail
+                isDeleted={setModalVisible}
+                onPress={() => navigation.navigate('MyFilter')}
+              />
+            </View>
+            <View style={{flexDirection: 'row'}}>
+              <Thumbnail
+                isDeleted={setModalVisible}
+                onPress={() => navigation.navigate('MyFilter')}
+              />
+              <Thumbnail
+                isDeleted={setModalVisible}
+                onPress={() => navigation.navigate('MyFilter')}
+              />
+            </View>
+            <View style={{flexDirection: 'row'}}>
+              <Thumbnail
+                isDeleted={setModalVisible}
+                onPress={() => navigation.navigate('MyFilter')}
+              />
+              <Thumbnail
+                isDeleted={setModalVisible}
+                onPress={() => navigation.navigate('MyFilter')}
+              />
+            </View>
+            <View style={{flexDirection: 'row'}}>
+              <Thumbnail
+                isDeleted={setModalVisible}
+                onPress={() => navigation.navigate('MyFilter')}
+              />
+              <Thumbnail
+                isDeleted={setModalVisible}
+                onPress={() => navigation.navigate('MyFilter')}
+              />
+            </View>
           </View>
-          <View style={{flexDirection: 'row'}}>
-            <Thumbnail
-              isDeleted={setModalVisible}
-              onPress={() => navigation.navigate('MyFilter')}
-            />
-            <Thumbnail
-              isDeleted={setModalVisible}
-              onPress={() => navigation.navigate('MyFilter')}
-            />
-          </View>
-          <View style={{flexDirection: 'row'}}>
-            <Thumbnail
-              isDeleted={setModalVisible}
-              onPress={() => navigation.navigate('MyFilter')}
-            />
-            <Thumbnail
-              isDeleted={setModalVisible}
-              onPress={() => navigation.navigate('MyFilter')}
-            />
-          </View>
-          <View style={{flexDirection: 'row'}}>
-            <Thumbnail
-              isDeleted={setModalVisible}
-              onPress={() => navigation.navigate('MyFilter')}
-            />
-            <Thumbnail
-              isDeleted={setModalVisible}
-              onPress={() => navigation.navigate('MyFilter')}
-            />
-          </View>
-        </View>
+        </ScrollView>
       </LinearGradient>
     </LinearGradient>
   );

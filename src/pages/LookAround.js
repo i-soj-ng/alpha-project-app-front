@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, TextInput, StyleSheet, Image, Text } from "react-native";
+import { View, ScrollView, StyleSheet, Image, Text } from "react-native";
 import { LAHeader } from "../components/look_around/LAHeader";
 import { SearchBar } from "../components/look_around/SearchBar";
 import { CategoryButton } from "../components/look_around/CategoryButton";
@@ -46,20 +46,22 @@ export function LookAround() {
               <Text style={styles.arrangeText}>최신순</Text>
             </View>
           </View>
-          <View style={{alignItems: 'center', marginTop: heightPercentage(24)}}>
-            <View style={styles.contentRow}>
-              <Content/>
-              <Content/>
+          <ScrollView>
+            <View style={{alignItems: 'center', marginTop: heightPercentage(24)}}>
+              <View style={styles.contentRow}>
+                <Content/>
+                <Content/>
+              </View>
+              <View style={styles.contentRow}>
+                <Content/>
+                <Content/>
+              </View>
+              <View style={styles.contentRow}>
+                <Content/>
+                <Content/>
+              </View>
             </View>
-            <View style={styles.contentRow}>
-              <Content/>
-              <Content/>
-            </View>
-            <View style={styles.contentRow}>
-              <Content/>
-              <Content/>
-            </View>
-          </View>
+          </ScrollView>
         </View>
       </LinearGradient>
     </LinearGradient>
