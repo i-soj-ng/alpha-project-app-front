@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { fontPercentage, heightPercentage, widthPercentage } from "../../../ResponsiveSize";
 
-export function ChoiceBtn() {
+export function ChoiceBtn(props) {
   const [firstBtnStyle, setFirstBtnStyle] = React.useState(styles.button);
   const [secondBtnStyle, setSecondBtnStyle] = React.useState(styles.button);
   const [thirdBtnStyle, setThirdBtnStyle] = React.useState(styles.button);
@@ -32,18 +32,22 @@ export function ChoiceBtn() {
       setFirstBtnStyle(styles.clickedBtn);
       setSecondBtnStyle(styles.button);
       setThirdBtnStyle(styles.button);
+      props.onClick("1");
     } else if (secondBtnClicked === true) {
       setFirstBtnStyle(styles.button);
       setSecondBtnStyle(styles.clickedBtn);
       setThirdBtnStyle(styles.button);
+      props.onClick("2");
     } else if (thirdBtnClicked === true) {
       setFirstBtnStyle(styles.button);
       setSecondBtnStyle(styles.button);
       setThirdBtnStyle(styles.clickedBtn);
+      props.onClick("3");
     } else {
       setFirstBtnStyle(styles.button);
       setSecondBtnStyle(styles.button);
       setThirdBtnStyle(styles.button);
+      props.onClick("");
     }
   },[firstBtnClicked, secondBtnClicked, thirdBtnClicked])
 

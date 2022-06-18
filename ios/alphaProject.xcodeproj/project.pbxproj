@@ -12,15 +12,15 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1584FA546E4542CE864B9DC5 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 30BCD8083C07497E98978213 /* NotoSansKR-Regular.otf */; };
+		22342C7FFCED4C448547D127 /* NanumSquareR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E16DF12E61E4DF2B09598D6 /* NanumSquareR.ttf */; };
 		22FF433D94194136BD4DAEF9 /* ONE Mobile POP OTF.otf in Resources */ = {isa = PBXBuildFile; fileRef = 098785D500FB47B59BCFC04E /* ONE Mobile POP OTF.otf */; };
 		7699B88040F8A987B510C191 /* libPods-alphaProject-alphaProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-alphaProject-alphaProjectTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8869B438C7C145D898F10DC3 /* NanumSquareRoundEB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAE2ADAACA6B42E6AF9F6C48 /* NanumSquareRoundEB.ttf */; };
+		928B9BBDFCF742DEBD06CC25 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F67364A623D349E28D69EC27 /* NotoSansKR-Bold.otf */; };
 		A32813DA0002473E89FB1CD4 /* NanumSquareRoundR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F0A6F24EB384DFCA2873233 /* NanumSquareRoundR.ttf */; };
 		FA82CF21AED44BACA94FB718 /* NanumSquareRoundB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B19829A4DA8D4F688C0E74B0 /* NanumSquareRoundB.ttf */; };
-		1584FA546E4542CE864B9DC5 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 30BCD8083C07497E98978213 /* NotoSansKR-Regular.otf */; };
-		928B9BBDFCF742DEBD06CC25 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F67364A623D349E28D69EC27 /* NotoSansKR-Bold.otf */; };
-		22342C7FFCED4C448547D127 /* NanumSquareR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E16DF12E61E4DF2B09598D6 /* NanumSquareR.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,7 @@
 		00E356EE1AD99517003FC87E /* alphaProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = alphaProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* alphaProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = alphaProjectTests.m; sourceTree = "<group>"; };
-		098785D500FB47B59BCFC04E /* ONE Mobile POP OTF.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "ONE Mobile POP OTF.otf"; path = "../src/assets/fonts/ONE Mobile POP OTF.otf"; sourceTree = "<group>"; };
+		098785D500FB47B59BCFC04E /* ONE Mobile POP OTF.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ONE Mobile POP OTF.otf"; path = "../src/assets/fonts/ONE Mobile POP OTF.otf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* alphaProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alphaProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = alphaProject/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = alphaProject/AppDelegate.mm; sourceTree = "<group>"; };
@@ -46,7 +46,9 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = alphaProject/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-alphaProject-alphaProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-alphaProject-alphaProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F0A6F24EB384DFCA2873233 /* NanumSquareRoundR.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = NanumSquareRoundR.ttf; path = ../src/assets/fonts/NanumSquareRoundR.ttf; sourceTree = "<group>"; };
+		30BCD8083C07497E98978213 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansKR-Regular.otf"; path = "../src/assets/fonts/NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-alphaProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alphaProject.debug.xcconfig"; path = "Target Support Files/Pods-alphaProject/Pods-alphaProject.debug.xcconfig"; sourceTree = "<group>"; };
+		4E16DF12E61E4DF2B09598D6 /* NanumSquareR.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = NanumSquareR.ttf; path = ../src/assets/fonts/NanumSquareR.ttf; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-alphaProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alphaProject.release.xcconfig"; path = "Target Support Files/Pods-alphaProject/Pods-alphaProject.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-alphaProject-alphaProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alphaProject-alphaProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-alphaProject-alphaProjectTests/Pods-alphaProject-alphaProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-alphaProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-alphaProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,10 +58,8 @@
 		B19829A4DA8D4F688C0E74B0 /* NanumSquareRoundB.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = NanumSquareRoundB.ttf; path = ../src/assets/fonts/NanumSquareRoundB.ttf; sourceTree = "<group>"; };
 		DAE2ADAACA6B42E6AF9F6C48 /* NanumSquareRoundEB.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = NanumSquareRoundEB.ttf; path = ../src/assets/fonts/NanumSquareRoundEB.ttf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F67364A623D349E28D69EC27 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansKR-Bold.otf"; path = "../src/assets/fonts/NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
 		FABC81F6228944569F3A0E26 /* ONEMobilePOP.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = ONEMobilePOP.ttf; path = ../src/assets/fonts/ONEMobilePOP.ttf; sourceTree = "<group>"; };
-		30BCD8083C07497E98978213 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; name = "NotoSansKR-Regular.otf"; path = "../src/assets/fonts/NotoSansKR-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F67364A623D349E28D69EC27 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; name = "NotoSansKR-Bold.otf"; path = "../src/assets/fonts/NotoSansKR-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4E16DF12E61E4DF2B09598D6 /* NanumSquareR.ttf */ = {isa = PBXFileReference; name = "NanumSquareR.ttf"; path = "../src/assets/fonts/NanumSquareR.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,7 +306,7 @@
 		};
 		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -524,6 +524,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = alphaProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -535,7 +536,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.alphaProject;
 				PRODUCT_NAME = alphaProject;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -550,6 +551,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = alphaProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -560,7 +562,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.alphaProject;
 				PRODUCT_NAME = alphaProject;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";

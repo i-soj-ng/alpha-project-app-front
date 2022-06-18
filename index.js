@@ -14,6 +14,6 @@ import { MakeFilter } from "./src/pages/MakeFilter";
 import { MakeAccessory } from "./src/pages/MakeAccessory";
 import { LookAround } from "./src/pages/LookAround";
 import { LookAroundDetail } from "./src/pages/LookAroundDetail";
+import { MakeFrame } from "./src/pages/MakeFrame";
 
 AppRegistry.registerComponent(appName, () => App);
-

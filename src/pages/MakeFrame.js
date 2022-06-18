@@ -1,13 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { deg } from "react-native-linear-gradient-degree";
 import LinearGradient from "react-native-linear-gradient";
 import { Image, Text, TouchableOpacity, View, StyleSheet, ScrollView } from "react-native";
 import { fontPercentage, heightPercentage, widthPercentage } from "../../ResponsiveSize";
 
 import { MFHeader } from "../components/make_filter/MFHeader";
-import { AccessoryScroll } from "../components/make_filter/AccessoryScroll";
+import { ColorScroll } from "../components/make_filter/ColorScroll";
+import { ThemeFrameScroll } from "../components/make_filter/ThemeFrameScroll";
 
-export function MakeAccessory({ navigation }) {
+export function MakeFrame({ navigation }) {
+  const [frameColor, setFrameColor] = React.useState('');
+  const [category, setCategory] = React.useState('');
+
   return (
     <LinearGradient
       style={{flex: 1}}
@@ -23,14 +27,30 @@ export function MakeAccessory({ navigation }) {
           "rgba(221, 229, 250, 0.4) 100%"
         ]} {...deg(180)}>
         <MFHeader
-          name="프레임"
+          name="소품"
           onXbtnPress={() => navigation.navigate('Main')}
-          onTextPress={() => navigation.navigate('MakeFrame')}
+          onTextPress={() => navigation.pop()}
         />
         <View style={styles.mainView}>
           <View style={{flex: 1}}>
             <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-              <Text style={styles.centerText}>소품 눌러보며 착용샷 보기</Text>
+              {
+                category === "테마"
+                  ? <Image
+                    source={require('../assets/images/frames/bubble-frame.png')}
+                    style={{
+                      width: widthPercentage(251),
+                      resizeMode: 'contain',
+                      tintColor: frameColor,
+                    }}/>
+                  : <Image
+                    source={require('../assets/images/frames/frame-basic.png')}
+                    style={{
+                      width: widthPercentage(317),
+                      resizeMode: 'contain',
+                      tintColor: frameColor,
+                    }}/>
+              }
               <TouchableOpacity style={styles.completeBtn}>
                 <Text style={styles.btnText}>완료</Text>
               </TouchableOpacity>
@@ -41,26 +61,27 @@ export function MakeAccessory({ navigation }) {
               <TouchableOpacity style={{marginLeft: widthPercentage(18)}}>
                 <Image source={require('../assets/images/make-accessory/none-icon.png')}/>
               </TouchableOpacity>
-              <TouchableOpacity style={{marginLeft: widthPercentage(33)}}>
+              <TouchableOpacity style={{marginLeft: widthPercentage(76)}}>
                 <Image source={require('../assets/images/make-accessory/heart-icon.png')}/>
               </TouchableOpacity>
-              <TouchableOpacity style={{marginLeft: widthPercentage(22)}}>
-                <Text style={styles.categoryText}>NEW</Text>
+              <TouchableOpacity
+                style={{marginLeft: widthPercentage(76)}}
+                onPress={() => setCategory("색상")}
+              >
+                <Text style={styles.categoryText}>색상</Text>
               </TouchableOpacity>
-              <TouchableOpacity style={{marginLeft: widthPercentage(22)}}>
-                <Text style={styles.categoryText}>HOT</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={{marginLeft: widthPercentage(22)}}>
-                <Text style={styles.categoryText}>모자</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={{marginLeft: widthPercentage(22)}}>
-                <Text style={styles.categoryText}>안경</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={{marginLeft: widthPercentage(22)}}>
-                <Text style={styles.categoryText}>등등</Text>
+              <TouchableOpacity
+                style={{marginLeft: widthPercentage(76)}}
+                onPress={() => setCategory("테마")}
+              >
+                <Text style={styles.categoryText}>테마</Text>
               </TouchableOpacity>
             </View>
-            <AccessoryScroll/>
+            {
+              category === "테마"
+                ? <ThemeFrameScroll/>
+                : <ColorScroll setColor={setFrameColor}/>
+            }
           </View>
         </View>
       </LinearGradient>
@@ -81,10 +102,10 @@ const styles = StyleSheet.create({
   completeBtn: {
     width: widthPercentage(56),
     height: heightPercentage(32),
-    backgroundColor: '#FFFFFF63',
+    backgroundColor: '#ECF2FF',
     borderWidth: 2,
     borderRadius: 16,
-    borderColor: '#FFFFFF8C',
+    borderColor: '#B4D2FF8C',
     justifyContent: 'center',
     alignItems: 'center',
     position: 'absolute',
@@ -94,7 +115,7 @@ const styles = StyleSheet.create({
   btnText: {
     fontFamily: 'NanumSquareRoundB',
     fontSize: fontPercentage(16),
-    color: '#1E3968DE',
+    color: '#4A70A9',
   },
   categoryTab: {
     display: 'flex',
@@ -108,4 +129,13 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: fontPercentage(16),
   },
+  scrollView: {
+    height: heightPercentage(108),
+    paddingVertical: heightPercentage(20),
+  },
+  bundle: {
+    display: 'flex',
+    flexDirection: 'row',
+    marginBottom: heightPercentage(14),
+  }
 });

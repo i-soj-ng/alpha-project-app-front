@@ -6,10 +6,16 @@ export function MFHeader(props) {
   return (
     <View style={styles.parentView}>
       <Image source={require('../../assets/images/making-page-icons/frame-icon.png')}/>
-      <TouchableOpacity style={styles.xBtn}>
+      <TouchableOpacity
+        style={styles.xBtn}
+        onPress={props.onXbtnPress}
+      >
         <Image source={require('../../assets/images/making-page-icons/x-icon.png')}/>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.textBtn}>
+      <TouchableOpacity
+        style={styles.textBtn}
+        onPress={props.onTextPress}
+      >
         <Text style={styles.text}>{props.name}</Text>
       </TouchableOpacity>
     </View>

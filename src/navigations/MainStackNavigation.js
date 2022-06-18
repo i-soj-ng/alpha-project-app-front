@@ -7,6 +7,8 @@ import { TabNavigation } from "./TabNavigation";
 import { MyFilter } from "../pages/MyFilter";
 import { QRPop } from "../pages/QRPop";
 import { LookAroundDetail } from "../pages/LookAroundDetail";
+import { MakeFilter } from "../pages/MakeFilter";
+import { MakeAccessory } from "../pages/MakeAccessory";
 
 const Stack = createStackNavigator();
 

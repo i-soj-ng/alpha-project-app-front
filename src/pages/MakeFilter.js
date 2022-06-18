@@ -7,6 +7,18 @@ import { ChoiceBtn } from "../components/make_filter/ChoiceBtn";
 import { fontPercentage, heightPercentage, widthPercentage } from "../../ResponsiveSize";
 
 export function MakeFilter({ navigation }) {
+  const [peopleNum, setPeopleNum] = React.useState("");
+
+  const goMakeFilter = () => {
+    if (peopleNum === "1") {
+      navigation.navigate("MakeAccessory", {id: 1});
+    } else if (peopleNum === "2") {
+      navigation.navigate("MakeAccessory", {id: 2});
+    } else if (peopleNum === "3") {
+      navigation.navigate("MakeAccessory", {id: 3});
+    }
+  }
+
   return (
     <LinearGradient
       style={{flex: 1}}
@@ -36,8 +48,8 @@ export function MakeFilter({ navigation }) {
         </View>
         <View style={{alignItems: 'center'}}>
           <Text style={styles.mainText}>인원 수를 선택해주세요</Text>
-          <ChoiceBtn/>
-          <TouchableOpacity style={styles.submitButton}>
+          <ChoiceBtn onClick={setPeopleNum}/>
+          <TouchableOpacity style={styles.submitButton} onPress={goMakeFilter}>
             <Text style={styles.submitText}>필터 제작 시작</Text>
           </TouchableOpacity>
         </View>

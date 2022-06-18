@@ -14,6 +14,33 @@ export function Login({ navigation }) {
   const [password, setPassword] = React.useState('');
   const [isDisabledButton, setIsDisabledButton] = React.useState(true);
 
+  // let userdata = new FormData();
+  // userdata.append("username", email);
+  // userdata.append("password", password);
+  //
+  // let requestOptions = {
+  //   method: 'POST',
+  //   body: userdata,
+  //   redirect: 'follow',
+  // };
+
+  const onClick = () => {
+    // fetch("http://13.124.186.189:8000/rest-auth/login/", requestOptions)
+    //   .then(response => response.text())
+    //   .then((result) => {
+    //     let resultKey = JSON.parse(result);
+    //     console.log(resultKey.key);
+    //       if (resultKey.key) {
+    //         console.log("Success");
+    //         navigation.navigate('Main');
+    //       } else {
+    //         console.log("failed");
+    //       }
+    //   })
+    //   .catch(error => console.log('error', error));
+    navigation.navigate('Main');
+  }
+
   return (
     <View>
       <View style={{alignItems: 'center'}}>
@@ -43,7 +70,7 @@ export function Login({ navigation }) {
           <SubmitButton
             name="로그인"
             isDisabledButton={isDisabledButton}
-            onPress={() => navigation.navigate('Main')}
+            onPress={onClick}
           />
         </View>
         <TextBelow text="아직 회원이 아니신가요?" name="회원가입" onPress={() => navigation.navigate('Signup')}/>
