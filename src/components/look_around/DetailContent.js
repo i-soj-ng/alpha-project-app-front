@@ -1,32 +1,53 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, StyleSheet, Image, Text, TouchableOpacity } from "react-native";
 
 import { fontPercentage, heightPercentage, widthPercentage } from "../../../ResponsiveSize";
 
-export function Content(props) {
+export function DetailContent() {
+  const [likeClicked, isLikeClicked] = React.useState(false);
+  const [heartIcon, setHeartIcon] = React.useState(require('../../assets/images/white-heart.png'));
+
+  useEffect(() => {
+    if (likeClicked === true) {
+      setHeartIcon(require('../../assets/images/red-heart-big.png'));
+    } else {
+      setHeartIcon(require('../../assets/images/white-heart.png'));
+    }
+  }, [likeClicked]);
+
   return (
     <View style={styles.content}>
-      <TouchableOpacity onPress={props.onPress} activeOpacity={0.8}>
+      <View style={{width: '100%', height: heightPercentage(355)}}>
         <Image
           source={require('../../assets/images/sample-frame.png')}
           style={{
-            width: widthPercentage(106),
-            height: heightPercentage(161),
+            width: '100%',
+            height: '100%',
+            resizeMode: 'contain',
           }}
         />
-      </TouchableOpacity>
+      </View>
       <TouchableOpacity
         style={{
           position: 'absolute',
-          right: widthPercentage(2),
-          top: heightPercentage(135)
+          right: widthPercentage(7),
+          top: heightPercentage(324)
         }}
+        onPress={() => isLikeClicked(!likeClicked)}
       >
-        <Image source={require('../../assets/images/white-heart.png')}/>
+        <Image
+          source={heartIcon}
+          style={{
+            width: widthPercentage(29),
+            height: heightPercentage(24),
+          }}
+        />
       </TouchableOpacity>
       <View style={styles.contentBottom}>
         <View style={styles.likeNumView}>
-          <Image source={require('../../assets/images/heart-vector.png')}/>
+          <Image
+            source={require('../../assets/images/heart-vector-big.png')}
+          />
           <Text style={styles.likeNum}>850</Text>
         </View>
         <Text style={styles.bottomText}>#해시 #해시태그</Text>
@@ -37,8 +58,8 @@ export function Content(props) {
 
 const styles = StyleSheet.create({
   content: {
-    width: widthPercentage(161),
-    height: heightPercentage(179),
+    width: widthPercentage(354),
+    height: heightPercentage(389),
     marginRight: widthPercentage(16),
     marginLeft: widthPercentage(16),
     backgroundColor: '#FFFFFF63',
@@ -48,7 +69,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   contentBottom: {
-    width: widthPercentage(160),
+    width: widthPercentage(353),
     borderTopWidth: 1,
     borderColor: '#FFFFFF8C',
     display: 'flex',
@@ -58,9 +79,9 @@ const styles = StyleSheet.create({
   },
   bottomText: {
     fontFamily: 'NanumSquareRoundR',
-    fontSize: fontPercentage(8),
+    fontSize: fontPercentage(16),
     color: '#1E3968DE',
-    marginTop: heightPercentage(4),
+    marginTop: heightPercentage(7),
   },
   likeNumView: {
     display: 'flex',
@@ -68,18 +89,19 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#FFFFFF63',
-    width: widthPercentage(30),
+    width: widthPercentage(60),
     borderWidth: 0.5,
     borderRadius: 8,
     borderColor: '#FFFFFF8C',
     position: 'absolute',
-    left: widthPercentage(2),
-    top: heightPercentage(1),
+    left: widthPercentage(4),
+    top: heightPercentage(4),
   },
   likeNum: {
     fontFamily: 'NotoSansKR-Regular',
-    fontSize: fontPercentage(8),
+    fontSize: fontPercentage(14),
     color: '#1E396880',
-    marginLeft: widthPercentage(4),
+    marginLeft: widthPercentage(8),
+    marginBottom: heightPercentage(1),
   }
 });

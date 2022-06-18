@@ -85,7 +85,6 @@ export function CategoryModal(props) {
           </View>
         </TouchableWithoutFeedback>
       </TouchableOpacity>
-
     </Modal>
   );
 }

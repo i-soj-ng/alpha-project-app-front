@@ -6,6 +6,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { TabNavigation } from "./TabNavigation";
 import { MyFilter } from "../pages/MyFilter";
 import { QRPop } from "../pages/QRPop";
+import { LookAroundDetail } from "../pages/LookAroundDetail";
 
 const Stack = createStackNavigator();
 
@@ -15,6 +16,7 @@ export function MainStackNavigation() {
       <Stack.Screen name='MainHome' component={TabNavigation} />
       <Stack.Screen name='MyFilter' component={MyFilter} />
       <Stack.Screen name='QRPop' component={QRPop} />
+      <Stack.Screen name='LookAroundDetail' component={LookAroundDetail} />
     </Stack.Navigator>
   );
 }

@@ -13,6 +13,16 @@ import { heightPercentage, widthPercentage } from "../../ResponsiveSize";
 
 const Tab = createBottomTabNavigator();
 
+const getVisibility = (route: any, selectedIndex: number) => {
+  console.log(route.state);
+  if (!route.state) return true;
+  let index = route.state.index;
+  if (index === selectedIndex) {
+    return false;
+  }
+  return true;
+}
+
 export function TabNavigation() {
   return (
     <Tab.Navigator

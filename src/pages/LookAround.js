@@ -11,7 +11,7 @@ import { deg } from "react-native-linear-gradient-degree";
 
 import { fontPercentage, heightPercentage, widthPercentage } from "../../ResponsiveSize";
 
-export function LookAround() {
+export function LookAround({ navigation }) {
   const [showModal, setShowModal] = React.useState(false);
 
   return (
@@ -37,8 +37,16 @@ export function LookAround() {
               width={widthPercentage(63)}
               isClicked={setShowModal}
             />
-            <CategoryButton title="프레임 종류" width={widthPercentage(74)}/>
-            <CategoryButton title="프레임 컷수" width={widthPercentage(74)}/>
+            <CategoryButton
+              title="프레임 종류"
+              width={widthPercentage(74)}
+              isClicked={setShowModal}
+            />
+            <CategoryButton
+              title="프레임 컷수"
+              width={widthPercentage(74)}
+              isClicked={setShowModal}
+            />
           </View>
           <View style={styles.semiTitle}>
             <Text style={styles.textStyle}>추천 네컷</Text>
@@ -56,16 +64,16 @@ export function LookAround() {
           <ScrollView>
             <View style={{alignItems: 'center', marginTop: heightPercentage(24)}}>
               <View style={styles.contentRow}>
-                <Content/>
-                <Content/>
+                <Content onPress={() => navigation.navigate('LookAroundDetail', {id: 1})}/>
+                <Content onPress={() => navigation.navigate('LookAroundDetail', {id: 1})}/>
               </View>
               <View style={styles.contentRow}>
-                <Content/>
-                <Content/>
+                <Content onPress={() => navigation.navigate('LookAroundDetail', {id: 1})}/>
+                <Content onPress={() => navigation.navigate('LookAroundDetail', {id: 1})}/>
               </View>
               <View style={styles.contentRow}>
-                <Content/>
-                <Content/>
+                <Content onPress={() => navigation.navigate('LookAroundDetail', {id: 1})}/>
+                <Content onPress={() => navigation.navigate('LookAroundDetail', {id: 1})}/>
               </View>
             </View>
           </ScrollView>
