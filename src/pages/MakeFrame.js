@@ -12,6 +12,8 @@ export function MakeFrame({ navigation }) {
   const [frameColor, setFrameColor] = React.useState('');
   const [category, setCategory] = React.useState('');
 
+  const [themeFrame, setThemeFrame] = React.useState(require('../assets/images/frames/bubble-frame.png'));
+
   return (
     <LinearGradient
       style={{flex: 1}}
@@ -37,7 +39,7 @@ export function MakeFrame({ navigation }) {
               {
                 category === "테마"
                   ? <Image
-                    source={require('../assets/images/frames/bubble-frame.png')}
+                    source={themeFrame}
                     style={{
                       width: widthPercentage(251),
                       resizeMode: 'contain',
@@ -79,7 +81,7 @@ export function MakeFrame({ navigation }) {
             </View>
             {
               category === "테마"
-                ? <ThemeFrameScroll/>
+                ? <ThemeFrameScroll setFrame={setThemeFrame}/>
                 : <ColorScroll setColor={setFrameColor}/>
             }
           </View>
