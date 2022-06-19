@@ -35,7 +35,7 @@ export function MyFilter({ navigation }) {
           <View style={styles.image}>
             <Image
               style={{height: '100%', width: '100%', resizeMode: 'cover'}}
-              source={require('../assets/images/sample-images/sample-image.png')} />
+              source={require('../assets/images/sample-images/thumbnail1.png')} />
           </View>
           <View style={styles.textBox}>
             <View style={styles.eachText}>
@@ -46,23 +46,23 @@ export function MyFilter({ navigation }) {
             </View>
             <View style={styles.eachText}>
               <Text style={styles.boldText}>프레임 컷수</Text>
-              <Text style={styles.detailText}>x컷</Text>
+              <Text style={styles.detailText}>4컷</Text>
             </View>
             <View style={styles.eachText}>
               <Text style={styles.boldText}>필터 태그</Text>
-              <Text style={styles.detailText}>#해시태그 #해시 #해시태그</Text>
+              <Text style={styles.detailText}>#악마 #뿔</Text>
             </View>
             <View style={styles.eachText}>
               <Text style={styles.boldText}>사용한 AR필터</Text>
-              <Text style={styles.detailText}>루피 안경 외 4</Text>
+              <Text style={styles.detailText}>악마 외 1</Text>
             </View>
             <View style={styles.eachText}>
               <Text style={styles.boldText}>촬영 인원</Text>
-              <Text style={styles.detailText}>2명</Text>
+              <Text style={styles.detailText}>1명</Text>
             </View>
             <View style={styles.eachText}>
               <Text style={styles.boldText}>제작일</Text>
-              <Text style={styles.detailText}>2022.04.05</Text>
+              <Text style={styles.detailText}>2022.06.19</Text>
             </View>
           </View>
           <TouchableOpacity
