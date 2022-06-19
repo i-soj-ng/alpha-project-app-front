@@ -53,40 +53,56 @@ export function Main({ navigation }) {
           }}>
             <View style={{flexDirection: 'row'}}>
               <Thumbnail
+                url={require('../assets/images/sample-images/thumbnail1.png')}
+                date="2022.06.19"
                 isDeleted={setModalVisible}
                 onPress={() => navigation.navigate('MyFilter')}
               />
               <Thumbnail
-                isDeleted={setModalVisible}
-                onPress={() => navigation.navigate('MyFilter')}
-              />
-            </View>
-            <View style={{flexDirection: 'row'}}>
-              <Thumbnail
-                isDeleted={setModalVisible}
-                onPress={() => navigation.navigate('MyFilter')}
-              />
-              <Thumbnail
+                url={require('../assets/images/sample-images/thumbnail2.png')}
+                date="2022.06.08"
                 isDeleted={setModalVisible}
                 onPress={() => navigation.navigate('MyFilter')}
               />
             </View>
             <View style={{flexDirection: 'row'}}>
               <Thumbnail
+                url={require('../assets/images/sample-images/thumbnail3.png')}
+                date="2022.06.17"
                 isDeleted={setModalVisible}
                 onPress={() => navigation.navigate('MyFilter')}
               />
               <Thumbnail
+                url={require('../assets/images/sample-images/thumbnail4.png')}
+                date="2022.06.11"
                 isDeleted={setModalVisible}
                 onPress={() => navigation.navigate('MyFilter')}
               />
             </View>
             <View style={{flexDirection: 'row'}}>
               <Thumbnail
+                url={require('../assets/images/sample-images/thumbnail5.png')}
+                date="2022.05.24"
                 isDeleted={setModalVisible}
                 onPress={() => navigation.navigate('MyFilter')}
               />
               <Thumbnail
+                url={require('../assets/images/sample-images/thumbnail1.png')}
+                date="2022.04.18"
+                isDeleted={setModalVisible}
+                onPress={() => navigation.navigate('MyFilter')}
+              />
+            </View>
+            <View style={{flexDirection: 'row'}}>
+              <Thumbnail
+                url={require('../assets/images/sample-images/thumbnail2.png')}
+                date="2022.04.28"
+                isDeleted={setModalVisible}
+                onPress={() => navigation.navigate('MyFilter')}
+              />
+              <Thumbnail
+                url={require('../assets/images/sample-images/thumbnail3.png')}
+                date="2022.06.18"
                 isDeleted={setModalVisible}
                 onPress={() => navigation.navigate('MyFilter')}
               />

@@ -64,16 +64,40 @@ export function LookAround({ navigation }) {
           <ScrollView>
             <View style={{alignItems: 'center', marginTop: heightPercentage(24)}}>
               <View style={styles.contentRow}>
-                <Content onPress={() => navigation.navigate('LookAroundDetail', {id: 1})}/>
-                <Content onPress={() => navigation.navigate('LookAroundDetail', {id: 1})}/>
+                <Content
+                  url={require('../assets/images/sample-images/photo1.png')}
+                  like={38}
+                  hashtag="#보라보라"
+                  onPress={() => navigation.navigate('LookAroundDetail', {id: 1})}/>
+                <Content
+                  like={170}
+                  hashtag="#핑크버블 #악마"
+                  url={require('../assets/images/sample-images/photo2.png')}
+                  onPress={() => navigation.navigate('LookAroundDetail', {id: 1})}/>
               </View>
               <View style={styles.contentRow}>
-                <Content onPress={() => navigation.navigate('LookAroundDetail', {id: 1})}/>
-                <Content onPress={() => navigation.navigate('LookAroundDetail', {id: 1})}/>
+                <Content
+                  url={require('../assets/images/sample-images/photo3.png')}
+                  like={29}
+                  hashtag="#포토버블 #스마일"
+                  onPress={() => navigation.navigate('LookAroundDetail', {id: 1})}/>
+                <Content
+                  url={require('../assets/images/sample-images/photo4.png')}
+                  like={41}
+                  hashtag="#나오늘 #생일"
+                  onPress={() => navigation.navigate('LookAroundDetail', {id: 1})}/>
               </View>
               <View style={styles.contentRow}>
-                <Content onPress={() => navigation.navigate('LookAroundDetail', {id: 1})}/>
-                <Content onPress={() => navigation.navigate('LookAroundDetail', {id: 1})}/>
+                <Content
+                  url={require('../assets/images/sample-images/photo5.png')}
+                  like={5}
+                  hashtag="#선글라스 #여름"
+                  onPress={() => navigation.navigate('LookAroundDetail', {id: 1})}/>
+                <Content
+                  url={require('../assets/images/sample-images/photo6.png')}
+                  like={78}
+                  hashtag="#악동 #따봉"
+                  onPress={() => navigation.navigate('LookAroundDetail', {id: 1})}/>
               </View>
             </View>
           </ScrollView>

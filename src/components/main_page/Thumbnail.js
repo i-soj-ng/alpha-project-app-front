@@ -7,7 +7,7 @@ export function Thumbnail(props) {
     <View style={styles.thumbnailView}>
       <TouchableOpacity onPress={props.onPress} activeOpacity={0.8}>
         <Image
-          source={require('../../assets/images/sample-images/thumbnail-image.png')}
+          source={props.url}
           style={styles.image}
         />
       </TouchableOpacity>
@@ -25,7 +25,7 @@ export function Thumbnail(props) {
             fontSize: fontPercentage(8),
             fontFamily: 'NotoSansKR-Regular',
             color: '#1E396880',
-          }}>2022.xx.xx</Text>
+          }}>{props.date}</Text>
       </View>
     </View>
   );

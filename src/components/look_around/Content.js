@@ -1,14 +1,25 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { View, StyleSheet, Image, Text, TouchableOpacity } from "react-native";
 
 import { fontPercentage, heightPercentage, widthPercentage } from "../../../ResponsiveSize";
 
 export function Content(props) {
+  const [likeClicked, isLikeClicked] = React.useState(false);
+  const [heartIcon, setHeartIcon] = React.useState(require('../../assets/images/white-heart.png'));
+
+  useEffect(() => {
+    if (likeClicked === true) {
+      setHeartIcon(require('../../assets/images/red-heart.png'));
+    } else {
+      setHeartIcon(require('../../assets/images/white-heart.png'));
+    }
+  }, [likeClicked]);
+
   return (
     <View style={styles.content}>
       <TouchableOpacity onPress={props.onPress} activeOpacity={0.8}>
         <Image
-          source={require('../../assets/images/sample-frame.png')}
+          source={props.url}
           style={{
             width: widthPercentage(106),
             height: heightPercentage(161),
@@ -21,15 +32,16 @@ export function Content(props) {
           right: widthPercentage(2),
           top: heightPercentage(135)
         }}
+        onPress={() => isLikeClicked(!likeClicked)}
       >
-        <Image source={require('../../assets/images/white-heart.png')}/>
+        <Image source={heartIcon}/>
       </TouchableOpacity>
       <View style={styles.contentBottom}>
         <View style={styles.likeNumView}>
           <Image source={require('../../assets/images/heart-vector.png')}/>
-          <Text style={styles.likeNum}>850</Text>
+          <Text style={styles.likeNum}>{props.like}</Text>
         </View>
-        <Text style={styles.bottomText}>#해시 #해시태그</Text>
+        <Text style={styles.bottomText}>{props.hashtag}</Text>
       </View>
     </View>
   );
