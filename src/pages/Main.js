@@ -60,7 +60,7 @@ export function Main({ navigation }) {
               />
               <Thumbnail
                 url={require('../assets/images/sample-images/thumbnail2.png')}
-                date="2022.06.08"
+                date="2022.06.17"
                 isDeleted={setModalVisible}
                 onPress={() => navigation.navigate('MyFilter')}
               />
@@ -68,13 +68,13 @@ export function Main({ navigation }) {
             <View style={{flexDirection: 'row'}}>
               <Thumbnail
                 url={require('../assets/images/sample-images/thumbnail3.png')}
-                date="2022.06.17"
+                date="2022.06.11"
                 isDeleted={setModalVisible}
                 onPress={() => navigation.navigate('MyFilter')}
               />
               <Thumbnail
                 url={require('../assets/images/sample-images/thumbnail4.png')}
-                date="2022.06.11"
+                date="2022.06.08"
                 isDeleted={setModalVisible}
                 onPress={() => navigation.navigate('MyFilter')}
               />
@@ -88,7 +88,7 @@ export function Main({ navigation }) {
               />
               <Thumbnail
                 url={require('../assets/images/sample-images/thumbnail1.png')}
-                date="2022.04.18"
+                date="2022.05.20"
                 isDeleted={setModalVisible}
                 onPress={() => navigation.navigate('MyFilter')}
               />
@@ -96,13 +96,13 @@ export function Main({ navigation }) {
             <View style={{flexDirection: 'row'}}>
               <Thumbnail
                 url={require('../assets/images/sample-images/thumbnail2.png')}
-                date="2022.04.28"
+                date="2022.05.05"
                 isDeleted={setModalVisible}
                 onPress={() => navigation.navigate('MyFilter')}
               />
               <Thumbnail
                 url={require('../assets/images/sample-images/thumbnail3.png')}
-                date="2022.06.18"
+                date="2022.05.01"
                 isDeleted={setModalVisible}
                 onPress={() => navigation.navigate('MyFilter')}
               />

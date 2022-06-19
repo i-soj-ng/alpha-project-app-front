@@ -19,7 +19,7 @@ export function DetailContent() {
     <View style={styles.content}>
       <View style={{width: '100%', height: heightPercentage(355)}}>
         <Image
-          source={require('../../assets/images/sample-frame.png')}
+          source={require('../../assets/images/sample-images/photo3.png')}
           style={{
             width: '100%',
             height: '100%',
@@ -48,9 +48,9 @@ export function DetailContent() {
           <Image
             source={require('../../assets/images/heart-vector-big.png')}
           />
-          <Text style={styles.likeNum}>850</Text>
+          <Text style={styles.likeNum}>382</Text>
         </View>
-        <Text style={styles.bottomText}>#해시 #해시태그</Text>
+        <Text style={styles.bottomText}>#포토버블 #스마일</Text>
       </View>
     </View>
   );

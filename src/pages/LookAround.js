@@ -78,7 +78,7 @@ export function LookAround({ navigation }) {
               <View style={styles.contentRow}>
                 <Content
                   url={require('../assets/images/sample-images/photo3.png')}
-                  like={29}
+                  like={382}
                   hashtag="#포토버블 #스마일"
                   onPress={() => navigation.navigate('LookAroundDetail', {id: 1})}/>
                 <Content

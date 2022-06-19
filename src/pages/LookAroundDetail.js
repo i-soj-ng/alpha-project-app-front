@@ -45,7 +45,7 @@ export function LookAroundDetail({ navigation }) {
                   flexDirection: 'row',
                   alignItems: 'center',
                 }}>
-                <Text style={styles.detailText}>킹받는 루피</Text>
+                <Text style={styles.detailText}>버블 프레임</Text>
                 <TouchableOpacity>
                   <Text style={styles.addButton}>저장</Text>
                 </TouchableOpacity>
@@ -67,7 +67,7 @@ export function LookAroundDetail({ navigation }) {
                   flexDirection: 'row',
                   alignItems: 'center',
                 }}>
-                <Text style={styles.detailText}>xxxx 외 4</Text>
+                <Text style={styles.detailText}>스마일 외 1</Text>
                 <TouchableOpacity>
                   <Text style={styles.addButton}>저장</Text>
                 </TouchableOpacity>
@@ -75,7 +75,7 @@ export function LookAroundDetail({ navigation }) {
             </View>
             <View style={styles.eachText}>
               <Text style={styles.boldText}>촬영 인원</Text>
-              <Text style={styles.detailText}>2명</Text>
+              <Text style={styles.detailText}>1명</Text>
             </View>
           </View>
           <TouchableOpacity
