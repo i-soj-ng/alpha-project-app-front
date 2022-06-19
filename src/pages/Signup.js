@@ -29,7 +29,7 @@ export function Signup({ navigation }) {
   };
 
   const onClick = () => {
-    fetch("http://3.36.113.88:8000//rest-auth/signup/", requestOptions)
+    fetch("http://3.36.113.88:8000/rest-auth/signup/", requestOptions)
       .then(response => response.text())
       .catch(error => console.log('error', error));
 

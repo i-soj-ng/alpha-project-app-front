@@ -25,7 +25,7 @@ export function Login({ navigation }) {
   };
 
   const onClick = () => {
-    fetch("http://3.36.113.88:8000//rest-auth/login/", requestOptions)
+    fetch("http://3.36.113.88:8000/rest-auth/login/", requestOptions)
       .then(response => response.text())
       .then((result) => {
         let resultKey = JSON.parse(result);
