@@ -35,7 +35,7 @@ export function MyFilter({ navigation }) {
           <View style={styles.image}>
             <Image
               style={{height: '100%', width: '100%', resizeMode: 'cover'}}
-              source={require('../assets/images/sample-images/thumbnail1.png')} />
+              source={require('../assets/images/sample-images/thumbnail6.png')} />
           </View>
           <View style={styles.textBox}>
             <View style={styles.eachText}>
@@ -50,7 +50,7 @@ export function MyFilter({ navigation }) {
             </View>
             <View style={styles.eachText}>
               <Text style={styles.boldText}>필터 태그</Text>
-              <Text style={styles.detailText}>#악마 #뿔</Text>
+              <Text style={styles.detailText}>#악마 #뿔 #선글라스</Text>
             </View>
             <View style={styles.eachText}>
               <Text style={styles.boldText}>사용한 AR필터</Text>
