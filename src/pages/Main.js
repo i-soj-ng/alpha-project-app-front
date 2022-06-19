@@ -53,7 +53,7 @@ export function Main({ navigation }) {
           }}>
             <View style={{flexDirection: 'row'}}>
               <Thumbnail
-                url={require('../assets/images/sample-images/thumbnail1.png')}
+                url={require('../assets/images/sample-images/thumbnail6.png')}
                 date="2022.06.19"
                 isDeleted={setModalVisible}
                 onPress={() => navigation.navigate('MyFilter')}
