@@ -16,24 +16,24 @@ export function Signup({ navigation }) {
   const [isDisabledButton, setIsDisabledButton] = React.useState(true);
   const [isEmailChecked, setIsEmailChecked] = React.useState(false);
 
-  // let userdata = new FormData();
-  // userdata.append("username", email);
-  // userdata.append("email", email);
-  // userdata.append("password1", password);
-  // userdata.append("password2", rePassword);
-  //
-  // let requestOptions = {
-  //   method: 'POST',
-  //   body: userdata,
-  //   redirect: 'follow',
-  // };
+  let userdata = new FormData();
+  userdata.append("username", email);
+  userdata.append("email", email);
+  userdata.append("password1", password);
+  userdata.append("password2", rePassword);
+
+  let requestOptions = {
+    method: 'POST',
+    body: userdata,
+    redirect: 'follow',
+  };
 
   const onClick = () => {
-    // fetch("http://13.124.186.189:8000/rest-auth/signup/", requestOptions)
-    //   .then(response => response.text())
-    //   .catch(error => console.log('error', error));
-    //
-    // console.log(userdata)
+    fetch("http://13.124.186.189:8000/rest-auth/signup/", requestOptions)
+      .then(response => response.text())
+      .catch(error => console.log('error', error));
+
+    console.log(userdata)
 
     navigation.push('SignupAccept', )
   }

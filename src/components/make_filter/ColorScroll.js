@@ -8,18 +8,18 @@ export function ColorScroll(props) {
     <View style={{alignItems: 'center'}}>
       <ScrollView style={styles.scrollView}>
         <View style={styles.bundle}>
-          <FrameColor color="#FFC4C4" frameColor={props.setColor}/>
-          <FrameColor color="#FF8E8E" frameColor={props.setColor}/>
-          <FrameColor color="#FFE39A" frameColor={props.setColor}/>
-          <FrameColor color="#FFB389" frameColor={props.setColor}/>
-          <FrameColor color="#A2D8FF" frameColor={props.setColor}/>
+          <FrameColor color="#A6C9FF" frameColor={props.setColor} url={require('../../assets/images/frames/blue-frame2.png')}/>
+          <FrameColor color="#95D1D9" frameColor={props.setColor} url={require('../../assets/images/frames/mint-frame.png')}/>
+          <FrameColor color="#FFCD6D" frameColor={props.setColor} url={require('../../assets/images/frames/yellow-frame.png')}/>
+          <FrameColor color="#9ABCED" frameColor={props.setColor} url={require('../../assets/images/frames/blue-frame.png')}/>
+          <FrameColor color="#BBDFA5" frameColor={props.setColor} url={require('../../assets/images/frames/green-frame.png')}/>
         </View>
         <View style={styles.bundle}>
-          <FrameColor color="#A9D2B7" frameColor={props.setColor}/>
-          <FrameColor color="#9BB29C" frameColor={props.setColor}/>
-          <FrameColor color="#C93C3C" frameColor={props.setColor}/>
-          <FrameColor color="#526299" frameColor={props.setColor}/>
-          <FrameColor color="#757575" frameColor={props.setColor}/>
+          <FrameColor color="#FB9F8B" frameColor={props.setColor} url={require('../../assets/images/frames/red-frame.png')}/>
+          <FrameColor color="#89D090" frameColor={props.setColor} url={require('../../assets/images/frames/blue-frame2.png')}/>
+          <FrameColor color="#364E76" frameColor={props.setColor} url={require('../../assets/images/frames/blue-frame2.png')}/>
+          <FrameColor color="#C93C3C" frameColor={props.setColor} url={require('../../assets/images/frames/blue-frame2.png')}/>
+          <FrameColor color="#765136" frameColor={props.setColor} url={require('../../assets/images/frames/blue-frame2.png')}/>
         </View>
       </ScrollView>
     </View>
@@ -28,8 +28,8 @@ export function ColorScroll(props) {
 
 const styles = StyleSheet.create({
   scrollView: {
-    height: heightPercentage(108),
-    paddingVertical: heightPercentage(20),
+    height: heightPercentage(112),
+    paddingVertical: heightPercentage(12),
   },
   bundle: {
     display: 'flex',

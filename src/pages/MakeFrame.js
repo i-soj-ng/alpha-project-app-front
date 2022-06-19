@@ -9,9 +9,8 @@ import { ColorScroll } from "../components/make_filter/ColorScroll";
 import { ThemeFrameScroll } from "../components/make_filter/ThemeFrameScroll";
 
 export function MakeFrame({ navigation }) {
-  const [frameColor, setFrameColor] = React.useState('');
+  const [colorFrame, setColorFrame] = React.useState(require('../assets/images/frames/blue-frame.png'));
   const [category, setCategory] = React.useState('');
-
   const [themeFrame, setThemeFrame] = React.useState(require('../assets/images/frames/bubble-frame.png'));
 
   return (
@@ -36,23 +35,23 @@ export function MakeFrame({ navigation }) {
         <View style={styles.mainView}>
           <View style={{flex: 1}}>
             <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-              {
-                category === "테마"
-                  ? <Image
-                    source={themeFrame}
-                    style={{
-                      width: widthPercentage(251),
-                      resizeMode: 'contain',
-                      tintColor: frameColor,
-                    }}/>
-                  : <Image
-                    source={require('../assets/images/frames/frame-basic.png')}
-                    style={{
-                      width: widthPercentage(317),
-                      resizeMode: 'contain',
-                      tintColor: frameColor,
-                    }}/>
-              }
+              <View>
+                {
+                  category === "테마"
+                    ? <Image
+                      source={themeFrame}
+                      style={{
+                        width: widthPercentage(251),
+                        resizeMode: 'contain',
+                      }}/>
+                    : <Image
+                      source={colorFrame}
+                      style={{
+                        width: widthPercentage(317),
+                        resizeMode: 'contain',
+                      }}/>
+                }
+              </View>
               <TouchableOpacity style={styles.completeBtn}>
                 <Text style={styles.btnText}>완료</Text>
               </TouchableOpacity>
@@ -82,7 +81,7 @@ export function MakeFrame({ navigation }) {
             {
               category === "테마"
                 ? <ThemeFrameScroll setFrame={setThemeFrame}/>
-                : <ColorScroll setColor={setFrameColor}/>
+                : <ColorScroll setColor={setColorFrame}/>
             }
           </View>
         </View>

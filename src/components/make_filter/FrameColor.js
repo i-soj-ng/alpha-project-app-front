@@ -19,7 +19,7 @@ export function FrameColor(props) {
   return (
     <View style={{alignItems: 'center'}}>
       <View style={styles.box}>
-        <TouchableOpacity onPress={() => props.frameColor(props.color)}>
+        <TouchableOpacity onPress={() => props.frameColor(props.url)}>
           <View
             style={{
               backgroundColor: props.color,
