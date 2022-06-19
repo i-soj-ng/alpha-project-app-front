@@ -54,7 +54,7 @@ export function MyFilter({ navigation }) {
             </View>
             <View style={styles.eachText}>
               <Text style={styles.boldText}>사용한 AR필터</Text>
-              <Text style={styles.detailText}>악마 외 1</Text>
+              <Text style={styles.detailText}>악마 외 2</Text>
             </View>
             <View style={styles.eachText}>
               <Text style={styles.boldText}>촬영 인원</Text>
