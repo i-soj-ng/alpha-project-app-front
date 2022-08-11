@@ -1,7 +1,7 @@
 # Photo Bubble
 알파프로젝트: AR 네컷사진 'Photo Bubble' 앱 프론트엔드
 
-## 사용 스택
+## 스택
 React Native, Node.js
 
 ## 개발 완료 화면
