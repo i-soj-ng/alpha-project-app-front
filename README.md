@@ -1,5 +1,5 @@
 # Photo Bubble
-공업디자인학부 X 소프트웨어학부 협업 프로젝트: AR 네컷사진 'Photo Bubble'
+공업디자인학과 X 소프트웨어학부 협업 프로젝트: AR 네컷사진 'Photo Bubble'
 
 ## 개발 기술 스택
 React Native, Node.js
